@@ -10,11 +10,17 @@ class GameData {
     public col: number;
     /** 行Y */
     public row: number;
+    
+    public tileWidth:number = 40;
+    public tileHeight:number = 40;
+    
+    public lineColor: number = 0xff0000;
 
     public constructor() {
         this.col = 10;
         this.row = 10;
 
+        // x y
         this.mapData = [
             [1,0,0,0,3,9,4,4,0,8],
             [6,8,0,9,0,9,4,2,5,7],

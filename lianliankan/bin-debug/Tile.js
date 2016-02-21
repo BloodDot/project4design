@@ -5,14 +5,15 @@
  */
 var Tile = (function (_super) {
     __extends(Tile, _super);
-    function Tile(ttype, trow, tcol) {
+    function Tile(ttype, tcol, trow) {
         _super.call(this);
         this.type = ttype;
         this.col = tcol;
         this.row = trow;
         var bp = new egret.Bitmap(RES.getRes("icon_" + this.type + "_png"));
         this.addChild(bp);
-        bp.width = bp.height = 40;
+        bp.width = GameData.getInstance().tileWidth;
+        bp.height = GameData.getInstance().tileHeight;
         bp.touchEnabled = true;
         this.touchChildren = this.touchEnabled = true;
     }

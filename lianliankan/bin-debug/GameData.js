@@ -5,8 +5,12 @@
  */
 var GameData = (function () {
     function GameData() {
+        this.tileWidth = 40;
+        this.tileHeight = 40;
+        this.lineColor = 0xff0000;
         this.col = 10;
         this.row = 10;
+        // x y
         this.mapData = [
             [1, 0, 0, 0, 3, 9, 4, 4, 0, 8],
             [6, 8, 0, 9, 0, 9, 4, 2, 5, 7],
