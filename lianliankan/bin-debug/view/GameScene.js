@@ -20,8 +20,8 @@ var GameScene = (function (_super) {
                 tile = new Tile(GameData.getInstance().mapData[i][m], m, i);
                 tile.addEventListener(egret.TouchEvent.TOUCH_TAP, this.__onTileTap, this);
                 this.addChild(tile);
-                tile.x = 40 * m;
-                tile.y = 40 * i;
+                tile.x = GameData.getInstance().tileWidth * m;
+                tile.y = GameData.getInstance().tileHeight * i;
             }
         }
     };

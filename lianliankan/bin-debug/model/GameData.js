@@ -8,8 +8,8 @@ var GameData = (function () {
         this.tileWidth = 40;
         this.tileHeight = 40;
         this.lineColor = 0xff0000;
-        this.col = 10;
-        this.row = 10;
+        this.col = 16;
+        this.row = 12;
         // x y
         this.mapData = [
             [1, 0, 0, 0, 3, 9, 4, 4, 0, 8],

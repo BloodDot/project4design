@@ -137,13 +137,11 @@ var Main = (function (_super) {
         var button = e.target;
         button.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
         this.removeChild(button);
-        //        var panel = new eui.Panel();
-        //        panel.title = "Title";
-        //        panel.horizontalCenter = 0;
-        //        panel.verticalCenter = 0;
-        //        this.addChild(panel);
-        var gs = new GameScene();
-        this.addChild(gs);
+        //        var gs: GameScene = new GameScene();
+        //        this.addChild(gs);
+        //        gs.visible = false;
+        var es = new EditorScene();
+        this.addChild(es);
     };
     return Main;
 })(eui.UILayer);

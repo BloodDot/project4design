@@ -140,13 +140,12 @@ class Main extends eui.UILayer {
         var button:eui.Button = e.target;
         button.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.onButtonClick,this);
         this.removeChild(button);
-//        var panel = new eui.Panel();
-//        panel.title = "Title";
-//        panel.horizontalCenter = 0;
-//        panel.verticalCenter = 0;
-//        this.addChild(panel);
         
-        var gs: GameScene = new GameScene();
-        this.addChild(gs);
+//        var gs: GameScene = new GameScene();
+//        this.addChild(gs);
+//        gs.visible = false;
+        
+        var es:EditorScene = new EditorScene();
+        this.addChild(es);
     }
 }

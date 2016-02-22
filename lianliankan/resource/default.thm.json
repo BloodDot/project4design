@@ -13,7 +13,9 @@
     "resource/eui_skins/TextInputSkin.exml",
     "resource/eui_skins/ToggleSwitchSkin.exml",
     "resource/eui_skins/VScrollBarSkin.exml",
-    "resource/eui_skins/VSliderSkin.exml"
+    "resource/eui_skins/VSliderSkin.exml",
+    "skin/ArgsWindowSkin.exml",
+    "skin/EditorSceneSkin.exml"
   ],
   "skins": {
     "eui.Button": "resource/eui_skins/ButtonSkin.exml",

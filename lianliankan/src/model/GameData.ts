@@ -6,9 +6,9 @@
 class GameData {
     public mapData: Array<Array<number>>;
     public linkList: Array<Line>;
-    /** 列X */
+    /** 列Y */
     public col: number;
-    /** 行Y */
+    /** 行X */
     public row: number;
     
     public tileWidth:number = 40;
@@ -17,8 +17,8 @@ class GameData {
     public lineColor: number = 0xff0000;
 
     public constructor() {
-        this.col = 10;
-        this.row = 10;
+        this.col = 16;
+        this.row = 12;
 
         // x y
         this.mapData = [
