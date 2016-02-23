@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Egret</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #888888;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+    <!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/eui/eui.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.min.js"></script>
+	<script egret="lib" src="libs/modules/FileSaver/FileSaver.min.js"></script>
+	<!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    <!--other_libs_files_start-->
+    <!--other_libs_files_end-->
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+    <!--game_files_start-->
+	<script src="main.min.js"></script>
+	<!--game_files_end-->
+
+
+<script>
+    function DownloadText(filename,content) 
+    { 
+         console.log("chrome");
+            var aLink = document.createElement('a'); 
+            aLink.download = filename; 
+            aLink.href = content;//dataurl格式的字符串 
+            var evt = document.createEvent("HTMLEvents");//建立一个事件 
+            evt.initEvent("click", false, false);//这是一个单击事件 
+            aLink.dispatchEvent(evt);//触发事件 
+
+            return;
+        if(document.createElement("a").download)//谷歌和火狐，使用“a”标签的download属性 
+        { 
+            console.log("chrome");
+            var aLink = document.createElement('a'); 
+            aLink.download = filename; 
+            aLink.href = content;//dataurl格式的字符串 
+            var evt = document.createEvent("HTMLEvents");//建立一个事件 
+            evt.initEvent("click", false, false);//这是一个单击事件 
+            aLink.dispatchEvent(evt);//触发事件 
+        } 
+        else//IE 
+        { 
+            console.log("ie");
+            var Folder=BrowseFolder(); 
+            var fso,tf; 
+            fso = new ActiveXObject("Scripting.FileSystemObject");//创建文件系统对象 
+            tf = fso.CreateTextFile(Folder+filename,true);//创建一个文本文件 
+            tf.write(content);//向文件中写入内容 
+            tf.Close(); 
+            alert("保存完毕！"); 
+        } 
+    }
+
+    function BrowseFolder() 
+    {//使用ActiveX控件，选择保存目录 
+        try 
+        { 
+            var Message = "请选择保存文件夹"; //选择框提示信息 
+            var Shell = new ActiveXObject( "Shell.Application" ); 
+            var Folder = Shell.BrowseForFolder(0,Message,0x0040,0x11);//起始目录为：我的电脑 
+            //var Folder = Shell.BrowseForFolder(0,Message,0); //起始目录为：桌面 
+            if(Folder != null) 
+            { 
+                Folder = Folder.items(); // 返回 FolderItems 对象 
+                Folder = Folder.item(); // 返回 Folderitem 对象 
+                Folder = Folder.Path; // 返回路径 
+                if(Folder.charAt(Folder.length-1) != "\\") 
+                { 
+                    Folder = Folder + "\\"; 
+                } 
+                //document.all.savePath.value=Folder; 
+                return Folder; 
+            } 
+        } 
+        catch(e) 
+        { 
+            alert(e.message); 
+        } 
+    }
+</script>
+    
+</head>
+<body>
+
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="auto"
+         data-scale-mode="showAll"
+         data-frame-rate="30"
+         data-content-width="480"
+         data-content-height="800"
+         data-show-paint-rect="false"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-log-filter="" data-show-fps-style="x:0,y:0,size:30,textColor:0x00c200,bgAlpha:0.9">
+    </div>
+    <script>
+        egret.runEgret();
+    </script>
+</body>
+</html>

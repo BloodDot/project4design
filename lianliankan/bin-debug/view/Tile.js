@@ -5,16 +5,19 @@
  */
 var Tile = (function (_super) {
     __extends(Tile, _super);
-    function Tile(ttype, tcol, trow) {
+    function Tile(ttype, tcol, trow, emptyVisible) {
+        if (emptyVisible === void 0) { emptyVisible = false; }
         _super.call(this);
         this._type = ttype;
         this.col = tcol;
         this.row = trow;
-        this._bp = new egret.Bitmap(RES.getRes("icon_" + this.type + "_png"));
-        this.addChild(this._bp);
-        this._bp.width = GameData.getInstance().tileWidth;
-        this._bp.height = GameData.getInstance().tileHeight;
-        this._bp.touchEnabled = true;
+        if (emptyVisible || this._type != 0) {
+            this._bp = new egret.Bitmap(RES.getRes("icon_" + this.type + "_png"));
+            this.addChild(this._bp);
+            this._bp.width = GameData.getInstance().tileWidth;
+            this._bp.height = GameData.getInstance().tileHeight;
+            this._bp.touchEnabled = true;
+        }
         this.touchChildren = this.touchEnabled = true;
     }
     var d = __define,c=Tile,p=c.prototype;

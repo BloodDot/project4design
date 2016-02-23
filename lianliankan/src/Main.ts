@@ -136,6 +136,9 @@ class Main extends eui.UILayer {
         button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
     }
 
+    private _editorScene:EditorScene;
+    private _gameScene:GameScene;
+    
     private onButtonClick(e: egret.TouchEvent) {
         var button:eui.Button = e.target;
         button.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.onButtonClick,this);
@@ -145,7 +148,15 @@ class Main extends eui.UILayer {
 //        this.addChild(gs);
 //        gs.visible = false;
         
-        var es:EditorScene = new EditorScene();
-        this.addChild(es);
+        this._editorScene = new EditorScene();
+        this.addChild(this._editorScene);
+        
+        this._editorScene.addEventListener("runGame",this.__onRunGame,this);
+    }
+    
+    private __onRunGame(evt:egret.Event){
+        this._gameScene = new GameScene();
+        this.addChild(this._gameScene);
+        this._editorScene.visible = false;
     }
 }

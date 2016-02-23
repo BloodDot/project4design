@@ -140,8 +140,14 @@ var Main = (function (_super) {
         //        var gs: GameScene = new GameScene();
         //        this.addChild(gs);
         //        gs.visible = false;
-        var es = new EditorScene();
-        this.addChild(es);
+        this._editorScene = new EditorScene();
+        this.addChild(this._editorScene);
+        this._editorScene.addEventListener("runGame", this.__onRunGame, this);
+    };
+    p.__onRunGame = function (evt) {
+        this._gameScene = new GameScene();
+        this.addChild(this._gameScene);
+        this._editorScene.visible = false;
     };
     return Main;
 })(eui.UILayer);

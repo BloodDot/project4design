@@ -16,13 +16,13 @@ var EditorScene = (function (_super) {
     };
     p.init = function () {
         this._tileVect = [];
-        this._type = -1;
+        this._type = 1;
         var i, j = GameData.getInstance().col;
         var m, n = GameData.getInstance().row;
         var tile;
         for (i = 0; i < j; i++) {
             for (m = 0; m < n; m++) {
-                tile = new Tile(0, m, i);
+                tile = new Tile(0, m, i, true);
                 tile.addEventListener(egret.TouchEvent.TOUCH_TAP, this.__onTileTap, this);
                 this.group_tile.addChild(tile);
                 tile.x = GameData.getInstance().tileWidth * m;
@@ -42,7 +42,7 @@ var EditorScene = (function (_super) {
         this.btn_mode.addEventListener(egret.TouchEvent.TOUCH_TAP, this.__onModeTap, this);
         this.btn_save.addEventListener(egret.TouchEvent.TOUCH_TAP, this.__onSaveTap, this);
         this.btn_clear.addEventListener(egret.TouchEvent.TOUCH_TAP, this.__onClearTap, this);
-        this.btn_read.addEventListener(egret.TouchEvent.TOUCH_TAP, this.__onReadTap, this);
+        this.btn_run.addEventListener(egret.TouchEvent.TOUCH_TAP, this.__onRunTap, this);
     };
     p.__onModeTap = function (evt) {
         if (this.group_icon.visible) {
@@ -54,16 +54,30 @@ var EditorScene = (function (_super) {
             this._type = 1;
         }
         this.clearTiles();
-        //        var file:FileReader = new FileReade
-        //        var oPop = window.open(imgURL,"","width=1, height=1, top=5000, left=5000");
-        //        for(;oPop.document.readyState != "complete";) {
-        //            if(oPop.document.readyState == "complete") break;
-        //        }
-        //        oPop.document.execCommand("SaveAs");
-        //        oPop.close();
-        window['DownloadText']("aaa.txt", "aaa");
     };
     p.__onSaveTap = function (evt) {
+        this.saveMapData();
+        var obj = {};
+        obj.mapData = GameData.getInstance().mapData;
+        obj.col = GameData.getInstance().col;
+        obj.row = GameData.getInstance().row;
+        obj.tileWidth = GameData.getInstance().tileWidth;
+        obj.tileHeight = GameData.getInstance().tileHeight;
+        obj.lineColor = GameData.getInstance().lineColor;
+        var edata = JSON.stringify(obj);
+        var data = new Blob([edata], { type: "text/plain;charset=utf-8" });
+        var filename = 'lianliankan.json';
+        var disableAutoBOM = true;
+        saveAs(data, filename, disableAutoBOM);
+    };
+    p.saveMapData = function () {
+        var i, j = this._tileVect.length;
+        for (i = 0; i < j; i++) {
+            if (!GameData.getInstance().mapData[this._tileVect[i].row]) {
+                GameData.getInstance().mapData[this._tileVect[i].row] = [];
+            }
+            GameData.getInstance().mapData[this._tileVect[i].row][this._tileVect[i].col] = this._tileVect[i].type;
+        }
     };
     p.__onClearTap = function (evt) {
         this.clearTiles();
@@ -74,7 +88,9 @@ var EditorScene = (function (_super) {
             this._tileVect[i].type = 0;
         }
     };
-    p.__onReadTap = function (evt) {
+    p.__onRunTap = function (evt) {
+        this.saveMapData();
+        this.dispatchEventWith("runGame");
     };
     p.__onTileTap = function (evt) {
         var tile = evt.currentTarget;

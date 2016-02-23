@@ -1,0 +1,10 @@
+{
+    "name": "FileSaver",
+    "dependence": ["core"],
+    "source":"./",
+    "file_list": [
+        "FileSaver.js",
+        "FileSaver.min.js",
+         "FileSave.d.ts"
+    ]
+}

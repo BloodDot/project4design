@@ -7,7 +7,7 @@ class EditorScene extends eui.Component{
     private btn_mode:eui.Button;
     private btn_save:eui.Button;
     private btn_clear:eui.Button;
-    private btn_read:eui.Button;
+    private btn_run:eui.Button;
     
     private group_tile:eui.Group;
     private group_icon:eui.Group;
@@ -38,14 +38,14 @@ class EditorScene extends eui.Component{
 	
     private init(): void {
         this._tileVect = [];
-        this._type = -1;
+        this._type = 1;
         
         var i,j = GameData.getInstance().col;
         var m,n = GameData.getInstance().row;
         var tile: Tile;
         for(i = 0;i < j;i++) {
             for(m = 0;m < n;m++) {
-                tile = new Tile(0,m,i);
+                tile = new Tile(0,m,i,true);
                 tile.addEventListener(egret.TouchEvent.TOUCH_TAP,this.__onTileTap,this);
                 this.group_tile.addChild(tile);
                 tile.x = GameData.getInstance().tileWidth * m;
@@ -67,7 +67,7 @@ class EditorScene extends eui.Component{
         this.btn_mode.addEventListener(egret.TouchEvent.TOUCH_TAP,this.__onModeTap,this);
         this.btn_save.addEventListener(egret.TouchEvent.TOUCH_TAP,this.__onSaveTap,this);
         this.btn_clear.addEventListener(egret.TouchEvent.TOUCH_TAP,this.__onClearTap,this);
-        this.btn_read.addEventListener(egret.TouchEvent.TOUCH_TAP,this.__onReadTap,this);
+        this.btn_run.addEventListener(egret.TouchEvent.TOUCH_TAP,this.__onRunTap,this);
     }
     
     private __onModeTap(evt:egret.TouchEvent):void{
@@ -80,21 +80,35 @@ class EditorScene extends eui.Component{
         }
         
         this.clearTiles();
-//        var file:FileReader = new FileReade
-        
-        
-//        var oPop = window.open(imgURL,"","width=1, height=1, top=5000, left=5000");
-//        for(;oPop.document.readyState != "complete";) {
-//            if(oPop.document.readyState == "complete") break;
-//        }
-//        oPop.document.execCommand("SaveAs");
-//        oPop.close();
-        
-        window['DownloadText']("aaa.txt","aaa");
     }
     
     private __onSaveTap(evt:egret.TouchEvent):void{
+        this.saveMapData();
         
+        var obj:any = {};
+        obj.mapData = GameData.getInstance().mapData;
+        obj.col = GameData.getInstance().col;
+        obj.row = GameData.getInstance().row;
+        obj.tileWidth = GameData.getInstance().tileWidth;
+        obj.tileHeight = GameData.getInstance().tileHeight;
+        obj.lineColor = GameData.getInstance().lineColor;
+        
+        var edata = JSON.stringify(obj);
+        
+        var data: Blob = new Blob([edata], {type: "text/plain;charset=utf-8"});
+        var filename: string = 'lianliankan.json';
+        var disableAutoBOM = true;
+        saveAs(data, filename, disableAutoBOM);
+    }
+    
+    private saveMapData():void{
+        var i,j = this._tileVect.length;
+        for(i = 0;i < j;i++) {
+            if(!GameData.getInstance().mapData[this._tileVect[i].row]) {
+                GameData.getInstance().mapData[this._tileVect[i].row] = [];
+            }
+            GameData.getInstance().mapData[this._tileVect[i].row][this._tileVect[i].col] = this._tileVect[i].type;
+        }
     }
     
     private __onClearTap(evt:egret.TouchEvent):void{
@@ -108,8 +122,9 @@ class EditorScene extends eui.Component{
         }
     }
     
-    private __onReadTap(evt:egret.TouchEvent):void{
-        
+    private __onRunTap(evt:egret.TouchEvent):void{
+        this.saveMapData();
+        this.dispatchEventWith("runGame");
     }
     
     private __onTileTap(evt:egret.TouchEvent):void{

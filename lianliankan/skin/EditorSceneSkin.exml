@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="EditorSceneSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Button id="btn_mode" label="模式切换" x="260" y="0"/>
-	<e:Button id="btn_save" y="0" label="保存" x="380"/>
+	<e:Button id="btn_mode" label="模式切换" x="260" y="0" visible="false"/>
+	<e:Button id="btn_save" y="0" label="保存" x="380" visible="false"/>
 	<e:Button id="btn_clear" x="260" y="49" label="清除"/>
-	<e:Button id="btn_read" label="读取" y="49" x="380"/>
+	<e:Button id="btn_run" label="运行" y="49" x="380"/>
 	<e:Group id="group_tile" height="700" width="480" x="0" y="100"/>
-	<e:Group id="group_icon" height="90" width="260" visible="false">
+	<e:Group id="group_icon" height="90" width="260">
 		<e:Image id="icon_1" source="icon_1_png" y="0" width="40" height="40" x="0"/>
 		<e:Image id="icon_2" source="icon_2_png" x="53" y="0" width="40" height="40"/>
 		<e:Image id="icon_3" source="icon_3_png" x="107" y="0" width="40" height="40"/>
