@@ -1,0 +1,1 @@
+{"version":3,"file":"SkillEditorScene.js","sourceRoot":"","sources":["../../src/editor/SkillEditorScene.ts"],"names":["SkillEditorScene","SkillEditorScene.constructor"],"mappings":"AAAA;;;;GAIG;AACH;IAA+BA,oCAAaA;IAK3CA;QACOC,iBAAOA,CAACA;IACfA,CAACA;;IACFD,uBAACA;AAADA,CAACA,AARD,EAA+B,GAAG,CAAC,SAAS,EAQ3C;oBARK,gBAAgB;AAQrB"}
