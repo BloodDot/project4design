@@ -40961,16 +40961,6 @@
 				},
 				{
 					"isFolder":false,
-					"key":"acr_dark_png",
-					"name":"acr_dark_png"
-				},
-				{
-					"isFolder":false,
-					"key":"acr_fire_png",
-					"name":"acr_fire_png"
-				},
-				{
-					"isFolder":false,
 					"key":"acr_light_png",
 					"name":"acr_light_png"
 				},
@@ -41683,6 +41673,16 @@
 					"isFolder":false,
 					"key":"img_bg_text_png",
 					"name":"img_bg_text_png"
+				},
+				{
+					"isFolder":false,
+					"key":"askill005_png",
+					"name":"askill005_png"
+				},
+				{
+					"isFolder":false,
+					"key":"askill055_png",
+					"name":"askill055_png"
 				}
 			]
 		}

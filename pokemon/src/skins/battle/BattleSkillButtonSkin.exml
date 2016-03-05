@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="BattleSkillButtonSkin" states="up,down,disabled"
-        xmlns:e="http://ns.egret.com/eui">
-	<e:Image width="100%" height="100%" scale9Grid="1,3,8,8" alpha.disabled="0.5"
-	         source="0D_png"
-	         source.down="0H_png"/>
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="normalDisplay" width="100%" height="100%" scale9Grid="1,3,8,8" alpha.disabled="0.5"
+	         source="0D_png" includeIn="up,disabled"/>
+	<e:Image id="downDisplay" width="100%" height="100%" scale9Grid="1,3,8,8" alpha.disabled="0.5"
+	         source="0H_png" includeIn="down"/>
 	<e:Label id="labelDisplay" top="8" bottom="8" left="74"
 	         size="20" fontFamily="楷体"
 	         verticalAlign="middle" textAlign="center" textColor="0x000000" text="火球术" width="130" strokeColor="0xD8D0B0" stroke="1" bold="true"/>

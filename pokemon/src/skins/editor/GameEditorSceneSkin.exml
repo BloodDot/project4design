@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="GameEditorSceneSkin" width="800" height="480" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Label text="我方ID" x="44" y="70" size="18" width="60"/>
+	<e:TextInput id="txt_own" x="44" y="101" width="60" height="30" restrict="0-9"/>
+	<ns1:BattleSkillButton id="btn_own_skill1" label="技能1" x="272" y="41" skinName="BattleSkillButtonSkin" normal="17D_png" down="17H_png"/>
+	<ns1:BattleSkillButton id="btn_own_skill2" y="41" label="技能2" skinName="BattleSkillButtonSkin" x="506" normal="17D_png" down="17H_png"/>
+	<ns1:BattleSkillButton id="btn_own_skill3" y="118" label="技能3" skinName="BattleSkillButtonSkin" x="272" normal="17D_png" down="17H_png"/>
+	<ns1:BattleSkillButton id="btn_own_skill4" y="118" label="技能4" skinName="BattleSkillButtonSkin" x="506" normal="17D_png" down="17H_png"/>
+	<e:Label width="60" y="340" size="18" text="敌方ID" x="44"/>
+	<e:TextInput id="txt_enemy" width="60" y="371" height="30" x="44" restrict="0-9"/>
+	<ns1:BattleSkillButton id="btn_enemy_skill1" y="305" label="技能1" skinName="BattleSkillButtonSkin" x="272" normal="17D_png" down="17H_png"/>
+	<ns1:BattleSkillButton id="btn_enemy_skill2" y="305" label="技能2" skinName="BattleSkillButtonSkin" x="506" normal="17D_png" down="17H_png"/>
+	<ns1:BattleSkillButton id="btn_enemy_skill3" y="382" label="技能3" skinName="BattleSkillButtonSkin" x="272" normal="17D_png" down="17H_png"/>
+	<ns1:BattleSkillButton id="btn_enemy_skill4" y="382" label="技能4" skinName="BattleSkillButtonSkin" x="506" normal="17D_png" down="17H_png"/>
+	<e:Label text="ps:ID可以是1-649任何编号的pokemon" x="44" y="236" size="18" textColor="0xFF0000"/>
+	<e:Image id="image_own_monster" source="0_png" x="143" y="82"/>
+	<e:Image id="image_enemy_monster" source="0_png" y="352" x="134"/>
+</e:Skin>

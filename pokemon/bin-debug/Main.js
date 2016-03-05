@@ -86,8 +86,19 @@ var Main = (function (_super) {
             RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
             RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
             this.isResourceLoadEnd = true;
-            this.createScene();
+            this.loadSkillConfig();
         }
+    };
+    p.loadSkillConfig = function () {
+        var loader = new egret.URLLoader();
+        loader.addEventListener(egret.Event.COMPLETE, this.__onSkillConfigComplete, this);
+        loader.load(new egret.URLRequest("resource/config/skill.csv"));
+    };
+    p.__onSkillConfigComplete = function (evt) {
+        evt.target.removeEventListener(egret.Event.COMPLETE, this.__onSkillConfigComplete, this);
+        var arr = ArrayUtil.CSVToArray(evt.target.data);
+        SkillTable.getInstance().analysis(arr);
+        this.createScene();
     };
     p.createScene = function () {
         if (this.isThemeLoadEnd && this.isResourceLoadEnd) {
@@ -126,21 +137,8 @@ var Main = (function (_super) {
      * Create scene interface
      */
     p.startCreateScene = function () {
-        var button = new eui.Button();
-        button.label = "Click!";
-        button.horizontalCenter = 0;
-        button.verticalCenter = 0;
-        this.addChild(button);
-        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
-    };
-    p.onButtonClick = function (e) {
-        //        var panel = new eui.Panel();
-        //        panel.title = "Title";
-        //        panel.horizontalCenter = 0;
-        //        panel.verticalCenter = 0;
-        //        this.addChild(panel);
-        var battle = new BattleScene();
-        this.addChild(battle);
+        var scene = new GameEditorScene();
+        this.addChild(scene);
     };
     return Main;
 })(eui.UILayer);

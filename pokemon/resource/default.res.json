@@ -9,7 +9,7 @@
 			"name":"sound"
 		},
 		{
-			"keys":"acr_bow_json,acr_bow_png,acr_buff_json,acr_buff_png,acr_dark_json,acr_dark_png,acr_fire_json,acr_fire_png,acr_light_json,acr_light_png,acr_water_json,acr_water_png,acr_wood_json,acr_wood_png,askill001_json,askill001_png,askill002_json,askill002_png,askill003_json,askill003_png,askill004_json,askill004_png,askill006_json,askill006_png,askill007_json,askill007_png,askill008_json,askill008_png,askill009_json,askill009_png,askill010_json,askill010_png,askill011_json,askill011_png,askill012_json,askill012_png,askill013_json,askill013_png,askill014_json,askill014_png,askill015_json,askill015_png,askill016_json,askill016_png,askill017_json,askill017_png,askill018_json,askill018_png,askill019_json,askill019_png,askill020_json,askill020_png,askill021_json,askill021_png,askill022_json,askill022_png,askill023_json,askill023_png,askill024_json,askill024_png,askill025_json,askill025_png,askill026_json,askill026_png,askill027_json,askill027_png,askill028_json,askill028_png,askill029_json,askill029_png,askill030_json,askill030_png,askill031_json,askill031_png,askill032_json,askill032_png,askill033_json,askill033_png,askill034_json,askill034_png,askill035_json,askill035_png,askill036_json,askill036_png,askill037_json,askill037_png,askill038_json,askill038_png,askill039_json,askill039_png,askill040_json,askill040_png,askill041_json,askill041_png,askill042_json,askill042_png,askill043_json,askill043_png,askill044_json,askill044_png,askill045_json,askill045_png,askill046_json,askill046_png,askill047_json,askill047_png,askill048_json,askill048_png,askill049_json,askill049_png,askill050_json,askill050_png,askill051_json,askill051_png,askill052_json,askill052_png,askill053_json,askill053_png,askill054_json,askill054_png,askill056_json,askill056_png,buff001_json,buff001_png,buff002_json,buff002_png,buff003_json,buff003_png,buff99_json,buff99_png,debuff001_json,debuff001_png,debuff002_json,debuff002_png,debuff004_json,debuff004_png,debuff005_json,ft_adc_attack_ready_json,ft_adc_attack_ready_png,ft_adc_skill_ready_json,ft_adc_skill_ready_png,ft_ad_attack_hit_json,ft_ad_attack_hit_png,ft_ad_attack_ready_json,ft_ad_attack_ready_png,ft_ad_skill_ready_json,ft_ad_skill_ready_png,ft_ad_skill_ready_reverse_json,ft_ad_skill_ready_reverse_png,ft_effect_arrow_png,ft_effect_buff_png,ft_effect_dark_png,ft_effect_debuff_png,ft_effect_fire_png,ft_effect_light_png,ft_effect_ready_json,ft_effect_ready_png,ft_effect_water_png,ft_effect_wood_png",
+			"keys":"acr_bow_json,acr_bow_png,acr_buff_json,acr_buff_png,acr_light_json,acr_light_png,acr_water_json,acr_water_png,acr_wood_json,acr_wood_png,askill001_json,askill001_png,askill002_json,askill002_png,askill003_json,askill003_png,askill004_json,askill004_png,askill006_json,askill006_png,askill007_json,askill007_png,askill008_json,askill008_png,askill009_json,askill009_png,askill010_json,askill010_png,askill011_json,askill011_png,askill012_json,askill012_png,askill013_json,askill013_png,askill014_json,askill014_png,askill015_json,askill015_png,askill016_json,askill016_png,askill017_json,askill017_png,askill018_json,askill018_png,askill019_json,askill019_png,askill020_json,askill020_png,askill021_json,askill021_png,askill022_json,askill022_png,askill023_json,askill023_png,askill024_json,askill024_png,askill025_json,askill025_png,askill026_json,askill026_png,askill027_json,askill027_png,askill028_json,askill028_png,askill029_json,askill029_png,askill030_json,askill030_png,askill031_json,askill031_png,askill032_json,askill032_png,askill033_json,askill033_png,askill034_json,askill034_png,askill035_json,askill035_png,askill036_json,askill036_png,askill037_json,askill037_png,askill038_json,askill038_png,askill039_json,askill039_png,askill040_json,askill040_png,askill041_json,askill041_png,askill042_json,askill042_png,askill043_json,askill043_png,askill044_json,askill044_png,askill045_json,askill045_png,askill046_json,askill046_png,askill047_json,askill047_png,askill048_json,askill048_png,askill049_json,askill049_png,askill050_json,askill050_png,askill051_json,askill051_png,askill052_json,askill052_png,askill053_json,askill053_png,askill054_json,askill054_png,askill056_json,askill056_png,buff001_json,buff001_png,buff002_json,buff002_png,buff003_json,buff003_png,buff99_json,buff99_png,debuff001_json,debuff001_png,debuff002_json,debuff002_png,debuff004_json,debuff004_png,debuff005_json,ft_adc_attack_ready_json,ft_adc_attack_ready_png,ft_adc_skill_ready_json,ft_adc_skill_ready_png,ft_ad_attack_hit_json,ft_ad_attack_hit_png,ft_ad_attack_ready_json,ft_ad_attack_ready_png,ft_ad_skill_ready_json,ft_ad_skill_ready_png,ft_ad_skill_ready_reverse_json,ft_ad_skill_ready_reverse_png,ft_effect_arrow_png,ft_effect_buff_png,ft_effect_dark_png,ft_effect_debuff_png,ft_effect_fire_png,ft_effect_light_png,ft_effect_ready_json,ft_effect_ready_png,ft_effect_water_png,ft_effect_wood_png,askill055_json,askill055_png,askill005_json,askill005_png",
 			"name":"skill"
 		},
 		{
@@ -40997,26 +40997,6 @@
 			"url":"assets/pokemon/skill/acr_buff.png"
 		},
 		{
-			"name":"acr_dark_json",
-			"type":"json",
-			"url":"assets/pokemon/skill/acr_dark.json"
-		},
-		{
-			"name":"acr_dark_png",
-			"type":"image",
-			"url":"assets/pokemon/skill/acr_dark.png"
-		},
-		{
-			"name":"acr_fire_json",
-			"type":"json",
-			"url":"assets/pokemon/skill/acr_fire.json"
-		},
-		{
-			"name":"acr_fire_png",
-			"type":"image",
-			"url":"assets/pokemon/skill/acr_fire.png"
-		},
-		{
 			"name":"acr_light_json",
 			"type":"json",
 			"url":"assets/pokemon/skill/acr_light.json"
@@ -45395,6 +45375,26 @@
 			"name":"img_bg_text_png",
 			"type":"image",
 			"url":"assets/pokemon/ui/img_bg_text.png"
+		},
+		{
+			"name":"askill055_json",
+			"type":"json",
+			"url":"assets/pokemon/skill/askill055.json"
+		},
+		{
+			"name":"askill055_png",
+			"type":"image",
+			"url":"assets/pokemon/skill/askill055.png"
+		},
+		{
+			"name":"askill005_json",
+			"type":"json",
+			"url":"assets/pokemon/skill/askill005.json"
+		},
+		{
+			"name":"askill005_png",
+			"type":"image",
+			"url":"assets/pokemon/skill/askill005.png"
 		}
 	]
 }
