@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="GameSkillListSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="img_mask_s1_png" width="800" height="480"/>
+	<e:Scroller id="scroller_skill" width="800" height="480">
+		<e:Group>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

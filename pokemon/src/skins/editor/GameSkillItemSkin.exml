@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="GameSkillItemSkin" width="800" height="60" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="800" height="60" source="border_png" x="0" y="0"/>
+	<e:Label id="txt_id" text="ID" x="7" y="15" width="37" height="30" textColor="0x000000" border="false"/>
+	<e:Label id="txt_name" text="名称" x="50" y="16" textColor="0x000000" border="false"/>
+	<e:Label id="txt_damage" text="伤害值" x="178" y="16" textColor="0x000000" border="false"/>
+	<e:Label id="txt_type" y="16" text="攻击方式" x="366" textColor="0x000000" border="false"/>
+	<e:Label id="txt_series" y="16" text="属性" x="628" textColor="0x000000" border="false"/>
+	<e:Button id="btn_confirm" label="选择" x="700" y="5"/>
+	<e:Image source="img_mask_s1_png" x="45" height="60" width="3"/>
+	<e:Image source="img_mask_s1_png" width="3" height="60" x="170"/>
+	<e:Image source="img_mask_s1_png" width="3" height="60" x="360"/>
+	<e:Image source="img_mask_s1_png" width="3" height="60" x="625"/>
+</e:Skin>

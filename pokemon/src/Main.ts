@@ -145,5 +145,17 @@ class Main extends eui.UILayer {
     protected startCreateScene(): void {
         var scene: GameEditorScene = new GameEditorScene();
         this.addChild(scene);
+        scene.addEventListener("startBattle",this.__startBattle,this);
+    }
+    
+    private __startBattle(evt:egret.Event){
+        var editor: GameEditorScene = evt.target;
+        editor.removeEventListener("startBattle",this.__startBattle,this);
+        editor.visible = false;
+        
+        var scene: BattleScene = new BattleScene();
+        scene.ownObj = editor.ownSkobj;
+        scene.enemyObj = editor.enemySkobj;
+        this.addChild(scene);
     }
 }

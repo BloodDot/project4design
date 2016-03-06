@@ -29,4 +29,8 @@ class SkillTable {
             }
         }
     }
+    
+    public get vect(): Array<SkillCell>{
+        return this._vect;
+    }
 }

@@ -15,6 +15,8 @@ var game_file_list = [
 	"bin-debug/config/skill/SkillCell.js",
 	"bin-debug/config/skill/SkillTable.js",
 	"bin-debug/editor/GameEditorScene.js",
+	"bin-debug/editor/GameSkillItem.js",
+	"bin-debug/editor/GameSkillList.js",
 	"bin-debug/editor/SkillEditorScene.js",
 	"bin-debug/editor/ZMovieClip.js",
 	"bin-debug/LoadingUI.js",

@@ -24,6 +24,11 @@ var SkillTable = (function () {
             }
         }
     };
+    d(p, "vect"
+        ,function () {
+            return this._vect;
+        }
+    );
     return SkillTable;
 })();
 egret.registerClass(SkillTable,'SkillTable');

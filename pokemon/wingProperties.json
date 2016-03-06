@@ -41683,6 +41683,11 @@
 					"isFolder":false,
 					"key":"askill055_png",
 					"name":"askill055_png"
+				},
+				{
+					"isFolder":false,
+					"key":"img_mask_s1_png",
+					"name":"img_mask_s1_png"
 				}
 			]
 		}

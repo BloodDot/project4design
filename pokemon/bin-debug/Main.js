@@ -139,6 +139,16 @@ var Main = (function (_super) {
     p.startCreateScene = function () {
         var scene = new GameEditorScene();
         this.addChild(scene);
+        scene.addEventListener("startBattle", this.__startBattle, this);
+    };
+    p.__startBattle = function (evt) {
+        var editor = evt.target;
+        editor.removeEventListener("startBattle", this.__startBattle, this);
+        editor.visible = false;
+        var scene = new BattleScene();
+        scene.ownObj = editor.ownSkobj;
+        scene.enemyObj = editor.enemySkobj;
+        this.addChild(scene);
     };
     return Main;
 })(eui.UILayer);

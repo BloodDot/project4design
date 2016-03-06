@@ -32,7 +32,9 @@
     "src/skins/battle/BattleHpBarSkin.exml",
     "src/skins/battle/BattleSkillButtonSkin.exml",
     "src/skins/battle/BattleSceneSkin.exml",
+    "src/skins/editor/GameSkillListSkin.exml",
     "src/skins/editor/GameEditorSceneSkin.exml",
+    "src/skins/editor/GameSkillItemSkin.exml",
     "src/skins/editor/SkillEditorSceneSkin.exml"
   ]
 }

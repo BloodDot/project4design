@@ -4,12 +4,13 @@
  *
  */
 class BattleSkillButton extends eui.Button {
-
     public normalDisplay: eui.Image;
     public downDisplay: eui.Image;
 
     private _normal: any;
     private _down: any;
+    
+    private _cell: SkillCell;
     public constructor() {
         super();
     }
@@ -53,5 +54,18 @@ class BattleSkillButton extends eui.Button {
             this.downDisplay.source = this._down;
         }
     }
-
+    
+    public set cell(value:SkillCell){
+        if(value == this._cell){
+            return;
+        }
+        this._cell = value;
+        this.normalDisplay.source = this._cell.series + "D_png";
+        this.downDisplay.source = this._cell.series + "H_png";
+        this.label = this.cell.name;
+    }
+    
+    public get cell():SkillCell{
+        return this._cell;
+    }
 }

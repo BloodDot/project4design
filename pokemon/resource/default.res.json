@@ -17,7 +17,7 @@
 			"name":"icon"
 		},
 		{
-			"keys":"0C_png,0D_png,0H_png,10C_png,10D_png,10H_png,11C_png,11D_png,11H_png,12C_png,12D_png,12H_png,13C_png,13D_png,13H_png,14C_png,14D_png,14H_png,15C_png,15D_png,15H_png,16C_png,16D_png,16H_png,17C_png,17D_png,17H_png,1C_png,1D_png,1H_png,2C_png,2D_png,2H_png,3C_png,3D_png,3H_png,4C_png,4D_png,4H_png,5C_png,5D_png,5H_png,6C_png,6D_png,6H_png,7C_png,7D_png,7H_png,8C_png,8D_png,8H_png,9C_png,9D_png,9H_png,AttackC_png,AttackD_png,AttackH_png,img_bar_bg_icon_png,img_bar_icon_png,img_bg_battle_png,img_bg_hp_enemy_png,img_bg_hp_own_png,img_bg_operate_png,img_bg_text_png",
+			"keys":"0C_png,0D_png,0H_png,10C_png,10D_png,10H_png,11C_png,11D_png,11H_png,12C_png,12D_png,12H_png,13C_png,13D_png,13H_png,14C_png,14D_png,14H_png,15C_png,15D_png,15H_png,16C_png,16D_png,16H_png,17C_png,17D_png,17H_png,1C_png,1D_png,1H_png,2C_png,2D_png,2H_png,3C_png,3D_png,3H_png,4C_png,4D_png,4H_png,5C_png,5D_png,5H_png,6C_png,6D_png,6H_png,7C_png,7D_png,7H_png,8C_png,8D_png,8H_png,9C_png,9D_png,9H_png,AttackC_png,AttackD_png,AttackH_png,img_bar_bg_icon_png,img_bar_icon_png,img_bg_battle_png,img_bg_hp_enemy_png,img_bg_hp_own_png,img_bg_operate_png,img_bg_text_png,img_mask_s1_png",
 			"name":"ui"
 		},
 		{
@@ -45395,6 +45395,11 @@
 			"name":"askill005_png",
 			"type":"image",
 			"url":"assets/pokemon/skill/askill005.png"
+		},
+		{
+			"name":"img_mask_s1_png",
+			"type":"image",
+			"url":"assets/pokemon/ui/img_mask_s1.png"
 		}
 	]
 }

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="BattleSceneSkin" width="800" height="480" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+<e:Skin class="BattleSceneSkin" width="800" height="480" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
 	<e:Image source="img_bg_battle_png" scaleX="3.3" scaleY="3.3" y="0" x="0"/>
 	<e:Image source="img_bg_hp_enemy_png" x="40" y="30" scaleX="3.3" scaleY="3.3"/>
 	<e:Image source="img_bg_hp_own_png" x="428" y="254.1" scaleX="3.3" scaleY="3.3"/>
@@ -17,10 +17,10 @@
 	<e:Label id="label_own_name" textColor="0x000000" text="妙蛙种子" fontFamily="楷体" bold="true" stroke="1" size="24" strokeColor="0xD8D0B0" x="480" y="272" width="150" height="26"/>
 	<e:Label id="label_own_cur_hp" y="329.5" textColor="0x000000" size="24" text="99" x="640" width="27" stroke="1" height="20" strokeColor="0xD8D0B0"/>
 	<e:Label id="label_own_max_hp" y="329.5" textColor="0x000000" height="20" text="99" width="27" stroke="1" size="24" strokeColor="0xD8D0B0" x="699"/>
-	<e:Image id="img_enemy_monster" source="1_front_png" x="430" y="-70" scaleX="3.3" scaleY="3.3"/>
-	<e:Image id="img_own_monster" x="108" y="162" scaleX="3.3" scaleY="3.3" source="1_3Gback_png"/>
-	<e:Button id="btn_skill1" label="火球术" x="35" y="380" skinName="BattleSkillButtonSkin" scaleX="0.75" scaleY="0.75"/>
-	<e:Button id="btn_skill3" skinName="BattleSkillButtonSkin" y="430" scaleX="0.75" label="火球术" scaleY="0.75" x="35"/>
-	<e:Button id="btn_skill2" skinName="BattleSkillButtonSkin" y="380" scaleX="0.75" label="火球术" scaleY="0.75" x="250"/>
-	<e:Button id="btn_skill4" skinName="BattleSkillButtonSkin" y="429.5" scaleX="0.75" label="火球术" scaleY="0.75" x="250"/>
+	<e:Image id="img_enemy_monster" x="495" y="41" scaleX="2" scaleY="2" source="3_front_png"/>
+	<e:Image id="img_own_monster" x="131" y="228" scaleX="1.5" scaleY="1.5" source="3_back_png"/>
+	<ns1:BattleSkillButton id="btn_skill1" label="火球术" x="35" y="380" skinName="BattleSkillButtonSkin" scaleX="0.75" scaleY="0.75"/>
+	<ns1:BattleSkillButton id="btn_skill3" skinName="BattleSkillButtonSkin" y="430" scaleX="0.75" label="火球术" scaleY="0.75" x="35"/>
+	<ns1:BattleSkillButton id="btn_skill2" skinName="BattleSkillButtonSkin" y="380" scaleX="0.75" label="火球术" scaleY="0.75" x="250"/>
+	<ns1:BattleSkillButton id="btn_skill4" skinName="BattleSkillButtonSkin" y="429.5" scaleX="0.75" label="火球术" scaleY="0.75" x="250"/>
 </e:Skin>

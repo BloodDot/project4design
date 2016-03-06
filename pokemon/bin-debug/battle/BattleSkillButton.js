@@ -50,6 +50,20 @@ var BattleSkillButton = (function (_super) {
             this.downDisplay.source = this._down;
         }
     };
+    d(p, "cell"
+        ,function () {
+            return this._cell;
+        }
+        ,function (value) {
+            if (value == this._cell) {
+                return;
+            }
+            this._cell = value;
+            this.normalDisplay.source = this._cell.series + "D_png";
+            this.downDisplay.source = this._cell.series + "H_png";
+            this.label = this.cell.name;
+        }
+    );
     return BattleSkillButton;
 })(eui.Button);
 egret.registerClass(BattleSkillButton,'BattleSkillButton');
