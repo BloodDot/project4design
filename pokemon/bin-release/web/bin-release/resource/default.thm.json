@@ -1,0 +1,104 @@
+{
+  "skins": {
+    "eui.Button": "resource/eui_skins/ButtonSkin.exml",
+    "eui.CheckBox": "resource/eui_skins/CheckBoxSkin.exml",
+    "eui.HScrollBar": "resource/eui_skins/HScrollBarSkin.exml",
+    "eui.HSlider": "resource/eui_skins/HSliderSkin.exml",
+    "eui.Panel": "resource/eui_skins/PanelSkin.exml",
+    "eui.TextInput": "resource/eui_skins/TextInputSkin.exml",
+    "eui.ProgressBar": "resource/eui_skins/ProgressBarSkin.exml",
+    "eui.RadioButton": "resource/eui_skins/RadioButtonSkin.exml",
+    "eui.Scroller": "resource/eui_skins/ScrollerSkin.exml",
+    "eui.ToggleSwitch": "resource/eui_skins/ToggleSwitchSkin.exml",
+    "eui.VScrollBar": "resource/eui_skins/VScrollBarSkin.exml",
+    "eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
+    "eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml"
+  },
+  "autoGenerateExmlsList": true,
+  "exmls": [
+    {
+      "path": "resource/eui_skins/ButtonSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<e:Skin class=\"skins.ButtonSkin\" states=\"up,down,disabled\" minHeight=\"50\" minWidth=\"100\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:Image width=\"100%\" height=\"100%\" scale9Grid=\"1,3,8,8\" alpha.disabled=\"0.5\"\n             source=\"button_up_png\"\n             source.down=\"button_down_png\"/>\n    <e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"8\" right=\"8\"\n             size=\"20\" fontFamily=\"Tahoma 'Microsoft Yahei'\"\n             textColor=\"0xFFFFFF\" verticalAlign=\"middle\" textAlign=\"center\"/>\n    <e:Image id=\"iconDisplay\" horizontalCenter=\"0\" verticalCenter=\"0\"/>\n</e:Skin>\n"
+    },
+    {
+      "path": "resource/eui_skins/CheckBoxSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"skins.CheckBoxSkin\" states=\"up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:Group width=\"100%\" height=\"100%\">\n        <e:layout>\n            <e:HorizontalLayout verticalAlign=\"middle\"/>\n        </e:layout>\n        <e:Image fillMode=\"scale\" alpha=\"1\" alpha.disabled=\"0.5\" alpha.down=\"0.7\"\n                 source=\"checkbox_unselect_png\"\n                 source.upAndSelected=\"checkbox_select_up_png\"\n                 source.downAndSelected=\"checkbox_select_down_png\"\n                 source.disabledAndSelected=\"checkbox_select_disabled_png\"/>\n        <e:Label id=\"labelDisplay\" size=\"20\" textColor=\"0x707070\"\n                 textAlign=\"center\" verticalAlign=\"middle\"\n                 fontFamily=\"Tahoma\"/>\n    </e:Group>\n</e:Skin>\n"
+    },
+    {
+      "path": "resource/eui_skins/HScrollBarSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"skins.HScrollBarSkin\" minWidth=\"20\" minHeight=\"8\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:Image id=\"thumb\" source=\"roundthumb_png\" scale9Grid=\"3,3,2,2\" height=\"8\" width=\"30\" verticalCenter=\"0\"/>\n</e:Skin>\n"
+    },
+    {
+      "path": "resource/eui_skins/HSliderSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"skins.HSliderSkin\" minWidth=\"20\" minHeight=\"8\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:Image id=\"track\" source=\"track_sb_png\" scale9Grid=\"1,1,4,4\" width=\"100%\"\n             height=\"6\" verticalCenter=\"0\"/>\n    <e:Image id=\"thumb\" source=\"thumb_png\" verticalCenter=\"0\"/>\n</e:Skin>\n"
+    },
+    {
+      "path": "resource/eui_skins/ItemRendererSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<e:Skin class=\"skins.ItemRendererSkin\" states=\"up,down,disabled\" minHeight=\"50\" minWidth=\"100\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:Image width=\"100%\" height=\"100%\" scale9Grid=\"1,3,8,8\" alpha.disabled=\"0.5\"\n             source=\"button_up_png\"\n             source.down=\"button_down_png\"/>\n    <e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"8\" right=\"8\"\n             size=\"20\" fontFamily=\"Tahoma 'Microsoft Yahei'\"\n             textColor=\"0xFFFFFF\" text=\"{data}\" verticalAlign=\"middle\" textAlign=\"center\"/>\n</e:Skin>\n"
+    },
+    {
+      "path": "resource/eui_skins/PanelSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"skins.PanelSkin\" minHeight=\"230\" minWidth=\"450\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:Image left=\"0\" right=\"0\" bottom=\"0\"  top=\"0\" source=\"border_png\" scale9Grid=\"2,2,12,12\" />\n    <e:Group id=\"moveArea\" left=\"0\" right=\"0\" top=\"0\" height=\"45\">\n        <e:Image left=\"0\" right=\"0\" bottom=\"0\"  top=\"0\" source=\"header_png\"/>\n        <e:Label id=\"titleDisplay\" size=\"20\" fontFamily=\"Tahoma\" textColor=\"0xFFFFFF\"\n                 wordWrap=\"false\" left=\"15\" right=\"5\" verticalCenter=\"0\"/>\n    </e:Group>\n    <e:Button id=\"closeButton\" label=\"close\" bottom=\"5\" horizontalCenter=\"0\"/>\n</e:Skin>\n"
+    },
+    {
+      "path": "resource/eui_skins/ProgressBarSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"skins.ProgressBarSkin\" minWidth=\"30\" minHeight=\"18\" xmlns:e=\"http://ns.egret.com/eui\">\n\t<e:Image source=\"track_pb_png\" scale9Grid=\"1,1,4,4\" width=\"100%\"\n\t\t\t height=\"100%\" verticalCenter=\"0\"/>\n\t<e:Image id=\"thumb\" height=\"100%\" width=\"100%\" source=\"thumb_pb_png\"/>\n\t<e:Label id=\"labelDisplay\" textAlign=\"center\" verticalAlign=\"middle\"\n\t\t\t size=\"15\" fontFamily=\"Tahoma\" textColor=\"0x707070\"\n\t\t\t horizontalCenter=\"0\" verticalCenter=\"0\"/>\n</e:Skin>\n"
+    },
+    {
+      "path": "resource/eui_skins/RadioButtonSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"skins.RadioButtonSkin\" states=\"up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:Group width=\"100%\" height=\"100%\">\n        <e:layout>\n            <e:HorizontalLayout verticalAlign=\"middle\"/>\n        </e:layout>\n        <e:Image fillMode=\"scale\" alpha=\"1\" alpha.disabled=\"0.5\" alpha.down=\"0.7\"\n                 source=\"radiobutton_unselect_png\"\n                 source.upAndSelected=\"radiobutton_select_up_png\"\n                 source.downAndSelected=\"radiobutton_select_down_png\"\n                 source.disabledAndSelected=\"radiobutton_select_disabled_png\"/>\n        <e:Label id=\"labelDisplay\" size=\"20\" textColor=\"0x707070\"\n                 textAlign=\"center\" verticalAlign=\"middle\"\n                 fontFamily=\"Tahoma\"/>\n    </e:Group>\n</e:Skin>\n"
+    },
+    {
+      "path": "resource/eui_skins/ScrollerSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"skins.ScrollerSkin\" minWidth=\"20\" minHeight=\"20\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:HScrollBar id=\"horizontalScrollBar\" width=\"100%\" bottom=\"0\"/>\n    <e:VScrollBar id=\"verticalScrollBar\" height=\"100%\" right=\"0\"/>\n</e:Skin>"
+    },
+    {
+      "path": "resource/eui_skins/TextInputSkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"skins.TextInputSkin\" minHeight=\"40\" minWidth=\"300\" states=\"normal,disabled,normalWithPrompt,disabledWithPrompt\" xmlns:e=\"http://ns.egret.com/eui\">\n\t<e:Image width=\"100%\" height=\"100%\" scale9Grid=\"1,3,8,8\" source=\"button_up_png\"/>\n\t<e:Rect height=\"100%\" width=\"100%\" fillColor=\"0xffffff\"/>\n \t<e:EditableText id=\"textDisplay\" verticalCenter=\"0\" left=\"10\" right=\"10\"\n\t                textColor=\"0x000000\" textColor.disabled=\"0xff0000\" width=\"100%\" height=\"24\" size=\"20\" />\n\t<e:Label id=\"promptDisplay\" verticalCenter=\"0\" left=\"10\" right=\"10\"\n\t                textColor=\"0xa9a9a9\" width=\"100%\" height=\"24\" size=\"20\" touchEnabled=\"false\" includeIn=\"normalWithPrompt,disabledWithPrompt\"/>\n</e:Skin>"
+    },
+    {
+      "path": "resource/eui_skins/ToggleSwitchSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"skins.ToggleSwitchSkin\" states=\"up,down,disabled,upAndSelected,downAndSelected,disabledAndSelected\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:Image source=\"on_png\"\n             source.up=\"off_png\"\n             source.down=\"off_png\"\n             source.disabled=\"off_png\"/>\n    <e:Image source=\"handle_png\"\n             horizontalCenter=\"-18\"\n             horizontalCenter.upAndSelected=\"18\"\n             horizontalCenter.downAndSelected=\"18\"\n             horizontalCenter.disabledAndSelected=\"18\"\n             verticalCenter=\"0\"/>\n</e:Skin>\n"
+    },
+    {
+      "path": "resource/eui_skins/VScrollBarSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"skins.VScrollBarSkin\" minWidth=\"8\" minHeight=\"20\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:Image id=\"thumb\" source=\"roundthumb_png\" scale9Grid=\"3,3,2,2\" height=\"30\" width=\"8\" horizontalCenter=\"0\"/>\n</e:Skin>\n"
+    },
+    {
+      "path": "resource/eui_skins/VSliderSkin.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<e:Skin class=\"skins.VSliderSkin\" minWidth=\"25\" minHeight=\"30\" xmlns:e=\"http://ns.egret.com/eui\">\n    <e:Image id=\"track\" source=\"track_png\" scale9Grid=\"1,1,4,4\" width=\"7\" height=\"100%\" horizontalCenter=\"0\"/>\n    <e:Image id=\"thumb\" source=\"thumb_png\" horizontalCenter=\"0\" />\n</e:Skin>\n"
+    },
+    {
+      "path": "src/skins/battle/BattleHpBarSkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"BattleHpBarSkin\" xmlns:e=\"http://ns.egret.com/eui\" width=\"150\" height=\"15\">\n\t<e:Image verticalCenter=\"0\" source=\"img_bar_bg_icon_png\" width=\"100%\" height=\"100%\" scale9Grid=\"12,1,76,8\"/>\n\t<e:Image id=\"thumb\" source=\"img_bar_icon_png\" width=\"146\" height=\"10\" horizontalCenter=\"0\" verticalCenter=\"-0.5\"/>\n</e:Skin>"
+    },
+    {
+      "path": "src/skins/battle/BattleSkillButtonSkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"BattleSkillButtonSkin\" states=\"up,down,disabled\"\n        xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n\t<e:Image id=\"normalDisplay\" width=\"100%\" height=\"100%\" scale9Grid=\"1,3,8,8\" alpha.disabled=\"0.5\"\n\t         source=\"0D_png\" includeIn=\"up,disabled\"/>\n\t<e:Image id=\"downDisplay\" width=\"100%\" height=\"100%\" scale9Grid=\"1,3,8,8\" alpha.disabled=\"0.5\"\n\t         source=\"0H_png\" includeIn=\"down\"/>\n\t<e:Label id=\"labelDisplay\" top=\"8\" bottom=\"8\" left=\"74\"\n\t         size=\"20\" fontFamily=\"楷体\"\n\t         verticalAlign=\"middle\" textAlign=\"center\" textColor=\"0x000000\" text=\"火球术\" width=\"130\" strokeColor=\"0xD8D0B0\" stroke=\"1\" bold=\"true\"/>\n</e:Skin>"
+    },
+    {
+      "path": "src/skins/battle/BattleSceneSkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"BattleSceneSkin\" width=\"800\" height=\"480\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" xmlns:ns1=\"*\">\n\t<e:Image source=\"img_bg_battle_png\" scaleX=\"3.3\" scaleY=\"3.3\" y=\"0\" x=\"0\"/>\n\t<e:Image source=\"img_bg_hp_enemy_png\" x=\"40\" y=\"30\" scaleX=\"3.3\" scaleY=\"3.3\"/>\n\t<e:Image source=\"img_bg_hp_own_png\" x=\"428\" y=\"254.1\" scaleX=\"3.3\" scaleY=\"3.3\"/>\n\t<e:ProgressBar id=\"bar_enemy_hp\" x=\"168\" y=\"84\" skinName=\"BattleHpBarSkin\" value=\"100\"/>\n\t<e:ProgressBar id=\"bar_own_hp\" value=\"100\" skinName=\"BattleHpBarSkin\" y=\"308\" x=\"587\"/>\n\t<e:Label id=\"label_enemy_lv\" text=\"99\" x=\"308\" y=\"50\" width=\"27\" height=\"20\" size=\"24\" textColor=\"0x000000\" stroke=\"1\" strokeColor=\"0xD8D0B0\"/>\n\t<e:Label id=\"label_enemy_name\" y=\"48\" textColor=\"0x000000\" height=\"26\" text=\"妙蛙种子\" x=\"60\" width=\"150\" stroke=\"1\" size=\"24\" strokeColor=\"0xD8D0B0\" bold=\"true\" fontFamily=\"楷体\" visible=\"false\"/>\n\t<e:Label id=\"label_own_lv\" y=\"274\" textColor=\"0x000000\" height=\"20\" text=\"99\" width=\"27\" stroke=\"1\" size=\"24\" strokeColor=\"0xD8D0B0\" x=\"726\"/>\n\t<e:Label id=\"label_own_name\" textColor=\"0x000000\" text=\"妙蛙种子\" fontFamily=\"楷体\" bold=\"true\" stroke=\"1\" size=\"24\" strokeColor=\"0xD8D0B0\" x=\"480\" y=\"272\" width=\"150\" height=\"26\" visible=\"false\"/>\n\t<e:Label id=\"label_own_cur_hp\" y=\"329.5\" textColor=\"0x000000\" size=\"24\" text=\"1000\" x=\"610\" width=\"60\" stroke=\"1\" height=\"20\" strokeColor=\"0xD8D0B0\" textAlign=\"right\"/>\n\t<e:Label id=\"label_own_max_hp\" y=\"329.5\" textColor=\"0x000000\" height=\"20\" text=\"1000\" stroke=\"1\" size=\"24\" strokeColor=\"0xD8D0B0\" x=\"690\"/>\n\t<e:Image id=\"img_enemy_monster\" x=\"495\" y=\"41\" scaleX=\"2\" scaleY=\"2\" source=\"3_front_png\"/>\n\t<e:Image id=\"img_own_monster\" x=\"120\" y=\"180\" scaleX=\"2\" scaleY=\"2\" source=\"3_back_png\"/>\n\t\n\t<e:Group id=\"group_operate\" visible=\"false\">\n\t\t<e:Image source=\"img_bg_operate_png\" y=\"376\" scale9Grid=\"29,5,174,34\" width=\"330\" height=\"103\" x=\"468.5999999999999\"/>\n\t\t<e:Image source=\"img_bg_operate_png\" x=\"0\" y=\"376\" scale9Grid=\"29,5,174,34\" width=\"460\" height=\"103\"/>\n\t\t<e:Label text=\"一般\" x=\"618\" y=\"441\" textColor=\"0x000000\" fontFamily=\"楷体\" bold=\"true\" stroke=\"1\" size=\"24\" strokeColor=\"0xD8D0B0\"/>\n\t\t<e:Label text=\"属性：\" x=\"523\" y=\"441\" textColor=\"0x000000\" fontFamily=\"楷体\" bold=\"true\" stroke=\"1\" size=\"24\" strokeColor=\"0xD8D0B0\"/>\n\t\t<e:Label text=\"999/999\" x=\"618\" y=\"398\" textColor=\"0x000000\" fontFamily=\"楷体\" bold=\"true\" stroke=\"1\" size=\"24\" strokeColor=\"0xD8D0B0\"/>\n\t\t<e:Label text=\"PP\" x=\"523\" y=\"398\" textColor=\"0x000000\" fontFamily=\"楷体\" bold=\"true\" stroke=\"1\" size=\"24\" strokeColor=\"0xD8D0B0\"/>\n\t\t<ns1:BattleSkillButton id=\"btn_skill1\" label=\"火球术\" x=\"35\" y=\"380\" skinName=\"BattleSkillButtonSkin\" scaleX=\"0.75\" scaleY=\"0.75\"/>\n\t\t<ns1:BattleSkillButton id=\"btn_skill3\" skinName=\"BattleSkillButtonSkin\" y=\"430\" scaleX=\"0.75\" label=\"火球术\" scaleY=\"0.75\" x=\"35\"/>\n\t\t<ns1:BattleSkillButton id=\"btn_skill2\" skinName=\"BattleSkillButtonSkin\" y=\"380\" scaleX=\"0.75\" label=\"火球术\" scaleY=\"0.75\" x=\"250\"/>\n\t\t<ns1:BattleSkillButton id=\"btn_skill4\" skinName=\"BattleSkillButtonSkin\" y=\"429.5\" scaleX=\"0.75\" label=\"火球术\" scaleY=\"0.75\" x=\"250\"/>\n\t</e:Group>\n\t<e:Group id=\"group_desc\">\n\t\t<e:Image source=\"img_bg_text_png\" x=\"2\" y=\"380\" width=\"795\" height=\"99\" scale9Grid=\"29,5,180,36\"/>\n\t\t<e:Label id=\"label_desc\" x=\"12\" y=\"390\" width=\"775\" height=\"80\"/>\n\t</e:Group>\n</e:Skin>"
+    },
+    {
+      "path": "src/skins/battle/ResultSceneSkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"ResultSceneSkin\" width=\"800\" height=\"480\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n\t<e:Label id=\"label_result\" text=\"战斗胜利\" x=\"200\" y=\"190\" size=\"100\" stroke=\"1\" strokeColor=\"0x000000\" bold=\"true\" fontFamily=\"楷体\" textColor=\"0xFFFFFF\"/>\n</e:Skin>"
+    },
+    {
+      "path": "src/skins/editor/GameSkillListSkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"GameSkillListSkin\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n\t<e:Image source=\"img_mask_s1_png\" width=\"800\" height=\"480\"/>\n\t<e:Scroller id=\"scroller_skill\" width=\"800\" height=\"480\">\n\t\t<e:Group>\n\t\t</e:Group>\n\t</e:Scroller>\n</e:Skin>"
+    },
+    {
+      "path": "src/skins/editor/GameEditorSceneSkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"GameEditorSceneSkin\" width=\"800\" height=\"480\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:ns1=\"*\" xmlns:w=\"http://ns.egret.com/wing\">\n\t<e:Label text=\"我方ID\" x=\"44\" y=\"70\" size=\"18\" width=\"60\"/>\n\t<e:TextInput id=\"txt_own\" x=\"44\" y=\"101\" width=\"60\" height=\"30\" restrict=\"0-9\"/>\n\t<ns1:BattleSkillButton id=\"btn_own_skill1\" label=\"技能1\" x=\"272\" y=\"41\" skinName=\"BattleSkillButtonSkin\" normal=\"17D_png\" down=\"17H_png\"/>\n\t<ns1:BattleSkillButton id=\"btn_own_skill2\" y=\"41\" label=\"技能2\" skinName=\"BattleSkillButtonSkin\" x=\"506\" normal=\"17D_png\" down=\"17H_png\"/>\n\t<ns1:BattleSkillButton id=\"btn_own_skill3\" y=\"118\" label=\"技能3\" skinName=\"BattleSkillButtonSkin\" x=\"272\" normal=\"17D_png\" down=\"17H_png\"/>\n\t<ns1:BattleSkillButton id=\"btn_own_skill4\" y=\"118\" label=\"技能4\" skinName=\"BattleSkillButtonSkin\" x=\"506\" normal=\"17D_png\" down=\"17H_png\"/>\n\t<e:Label width=\"60\" y=\"250\" size=\"18\" text=\"敌方ID\" x=\"43\"/>\n\t<e:TextInput id=\"txt_enemy\" width=\"60\" y=\"281\" height=\"30\" x=\"43\" restrict=\"0-9\"/>\n\t<ns1:BattleSkillButton id=\"btn_enemy_skill1\" y=\"215\" label=\"技能1\" skinName=\"BattleSkillButtonSkin\" x=\"271\" normal=\"17D_png\" down=\"17H_png\"/>\n\t<ns1:BattleSkillButton id=\"btn_enemy_skill2\" y=\"215\" label=\"技能2\" skinName=\"BattleSkillButtonSkin\" x=\"505\" normal=\"17D_png\" down=\"17H_png\"/>\n\t<ns1:BattleSkillButton id=\"btn_enemy_skill3\" y=\"292\" label=\"技能3\" skinName=\"BattleSkillButtonSkin\" x=\"271\" normal=\"17D_png\" down=\"17H_png\"/>\n\t<ns1:BattleSkillButton id=\"btn_enemy_skill4\" y=\"292\" label=\"技能4\" skinName=\"BattleSkillButtonSkin\" x=\"505\" normal=\"17D_png\" down=\"17H_png\"/>\n\t<e:Label text=\"ps:ID可以是1-649任何编号的口袋妖怪\" x=\"43\" y=\"428\" size=\"18\" textColor=\"0xFF0000\"/>\n\t<e:Image id=\"image_own_monster\" source=\"0_png\" x=\"143\" y=\"82\"/>\n\t<e:Image id=\"image_enemy_monster\" source=\"0_png\" y=\"262\" x=\"133\"/>\n\t<e:Button id=\"btn_battle\" label=\"对战\" x=\"621\" y=\"412\"/>\n\t<ns1:GameSkillList id=\"list_skill\" skinName=\"GameSkillListSkin\" visible=\"false\"/>\n</e:Skin>"
+    },
+    {
+      "path": "src/skins/editor/GameSkillItemSkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"GameSkillItemSkin\" width=\"800\" height=\"60\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n\t<e:Image width=\"800\" height=\"60\" source=\"border_png\" x=\"0\" y=\"0\"/>\n\t<e:Label id=\"txt_id\" text=\"ID\" x=\"7\" y=\"15\" width=\"37\" height=\"30\" textColor=\"0x000000\" border=\"false\"/>\n\t<e:Label id=\"txt_name\" text=\"名称\" x=\"50\" y=\"16\" textColor=\"0x000000\" border=\"false\"/>\n\t<e:Label id=\"txt_damage\" text=\"伤害值\" x=\"178\" y=\"16\" textColor=\"0x000000\" border=\"false\"/>\n\t<e:Label id=\"txt_type\" y=\"16\" text=\"攻击方式\" x=\"366\" textColor=\"0x000000\" border=\"false\"/>\n\t<e:Label id=\"txt_series\" y=\"16\" text=\"属性\" x=\"628\" textColor=\"0x000000\" border=\"false\"/>\n\t<e:Button id=\"btn_confirm\" label=\"选择\" x=\"700\" y=\"5\"/>\n\t<e:Image source=\"img_mask_s1_png\" x=\"45\" height=\"60\" width=\"3\"/>\n\t<e:Image source=\"img_mask_s1_png\" width=\"3\" height=\"60\" x=\"170\"/>\n\t<e:Image source=\"img_mask_s1_png\" width=\"3\" height=\"60\" x=\"360\"/>\n\t<e:Image source=\"img_mask_s1_png\" width=\"3\" height=\"60\" x=\"625\"/>\n</e:Skin>"
+    },
+    {
+      "path": "src/skins/editor/SkillEditorSceneSkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"SkillEditorSceneSkin\" width=\"800\" height=\"480\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\n\t<e:Button id=\"btn_play\" label=\"播放\" x=\"672\" y=\"140\"/>\n\t<e:Button id=\"btn_stop\" y=\"81\" label=\"暂停\" x=\"672\"/>\n\t<e:TextInput id=\"txt_input_skill\" x=\"672\" y=\"32\" width=\"100\"/>\n</e:Skin>"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"ResultScene.js","sourceRoot":"","sources":["../../src/battle/ResultScene.ts"],"names":["ResultScene","ResultScene.constructor"],"mappings":"AAAA;;;;GAIG;AACH;IAA0BA,+BAAaA;IAGtCA;QACOC,iBAAOA,CAACA;QACRA,IAAIA,CAACA,QAAQA,GAAGA,eAAeA,CAACA;IACvCA,CAACA;;IACFD,kBAACA;AAADA,CAACA,AAPD,EAA0B,GAAG,CAAC,SAAS,EAOtC;oBAPK,WAAW;AAOhB"}

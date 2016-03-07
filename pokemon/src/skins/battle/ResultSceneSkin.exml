@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ResultSceneSkin" width="800" height="480" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label id="label_result" text="战斗胜利" x="200" y="190" size="100" stroke="1" strokeColor="0x000000" bold="true" fontFamily="楷体" textColor="0xFFFFFF"/>
+</e:Skin>

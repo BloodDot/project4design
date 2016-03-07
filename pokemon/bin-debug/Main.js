@@ -139,16 +139,73 @@ var Main = (function (_super) {
     p.startCreateScene = function () {
         var scene = new GameEditorScene();
         this.addChild(scene);
+        SoundManager.getInstance().playOpenSound();
         scene.addEventListener("startBattle", this.__startBattle, this);
     };
     p.__startBattle = function (evt) {
-        var editor = evt.target;
-        editor.removeEventListener("startBattle", this.__startBattle, this);
-        editor.visible = false;
-        var scene = new BattleScene();
-        scene.ownObj = editor.ownSkobj;
-        scene.enemyObj = editor.enemySkobj;
-        this.addChild(scene);
+        this._editor = evt.target;
+        this._editor.removeEventListener("startBattle", this.__startBattle, this);
+        this._editor.visible = false;
+        var resArr = [];
+        if (this._editor.ownSkobj["1"]) {
+            this.pushRes(resArr, this._editor.ownSkobj["1"].resId);
+        }
+        if (this._editor.ownSkobj["2"]) {
+            this.pushRes(resArr, this._editor.ownSkobj["2"].resId);
+        }
+        if (this._editor.ownSkobj["3"]) {
+            this.pushRes(resArr, this._editor.ownSkobj["3"].resId);
+        }
+        if (this._editor.ownSkobj["4"]) {
+            this.pushRes(resArr, this._editor.ownSkobj["4"].resId);
+        }
+        if (this._editor.enemySkobj["1"]) {
+            this.pushRes(resArr, this._editor.enemySkobj["1"].resId);
+        }
+        if (this._editor.enemySkobj["2"]) {
+            this.pushRes(resArr, this._editor.enemySkobj["2"].resId);
+        }
+        if (this._editor.enemySkobj["3"]) {
+            this.pushRes(resArr, this._editor.enemySkobj["3"].resId);
+        }
+        if (this._editor.enemySkobj["4"]) {
+            this.pushRes(resArr, this._editor.enemySkobj["4"].resId);
+        }
+        RES.createGroup("skill", resArr);
+        RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.__onSkillGroupComplete, this);
+        RES.loadGroup("skill");
+    };
+    p.__onSkillGroupComplete = function (evt) {
+        SoundManager.getInstance().stopOpenSound();
+        this._battle = new BattleScene();
+        this._battle.ownObj = this._editor.ownSkobj;
+        this._battle.enemyObj = this._editor.enemySkobj;
+        this.addChild(this._battle);
+        this._battle.addEventListener("win", this.__onWin, this);
+        this._battle.addEventListener("lose", this.__onWin, this);
+    };
+    p.__onWin = function (evt) {
+        this._battle.visible = false;
+        this._result = new ResultScene();
+        this.addChild(this._result);
+        this._result.label_result.text = "战斗胜利";
+        SoundManager.getInstance().stopBattleSound();
+        SoundManager.getInstance().playWinSound();
+    };
+    p.__onLose = function (evt) {
+        this._battle.visible = false;
+        this._result = new ResultScene();
+        this.addChild(this._result);
+        this._result.label_result.text = "战斗失败";
+        SoundManager.getInstance().stopBattleSound();
+    };
+    p.pushRes = function (tarr, tres) {
+        if (tarr.indexOf(tres + "_png") != -1) {
+            tarr.push(tres + "_png");
+        }
+        if (tarr.indexOf(tres + "_json") != -1) {
+            tarr.push(tres + "_json");
+        }
     };
     return Main;
 })(eui.UILayer);

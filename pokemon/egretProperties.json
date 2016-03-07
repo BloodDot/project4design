@@ -20,6 +20,9 @@
     },
     {
         "name":"game"
+    },
+    {
+        "name":"tween"
     }
   ]
 }

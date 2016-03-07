@@ -56,6 +56,8 @@ declare class BattleSceneSkin extends eui.Skin{
 }
 declare class BattleSkillButtonSkin extends eui.Skin{
 }
+declare class ResultSceneSkin extends eui.Skin{
+}
 declare class GameEditorSceneSkin extends eui.Skin{
 }
 declare class GameSkillItemSkin extends eui.Skin{
