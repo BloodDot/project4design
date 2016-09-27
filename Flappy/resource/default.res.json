@@ -1,0 +1,80 @@
+{
+	"groups": [
+		{
+			"keys": "bird1_png,bird2_png,bird3_png,bird_json,bird_png,bg_png,ground_png,sfx_die_mp3,sfx_hit_mp3,sfx_point_mp3,sfx_swooshing_mp3,sfx_wing_mp3,tube1_png,tube2_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/bird1.png",
+			"type": "image",
+			"name": "bird1_png"
+		},
+		{
+			"url": "assets/bird2.png",
+			"type": "image",
+			"name": "bird2_png"
+		},
+		{
+			"url": "assets/bird3.png",
+			"type": "image",
+			"name": "bird3_png"
+		},
+		{
+			"url": "assets/bird.json",
+			"type": "json",
+			"name": "bird_json"
+		},
+		{
+			"url": "assets/bird.png",
+			"type": "image",
+			"name": "bird_png"
+		},
+		{
+			"url": "assets/bg.png",
+			"type": "image",
+			"name": "bg_png"
+		},
+		{
+			"url": "assets/ground.png",
+			"type": "image",
+			"name": "ground_png"
+		},
+		{
+			"url": "assets/sfx_die.mp3",
+			"type": "sound",
+			"name": "sfx_die_mp3"
+		},
+		{
+			"url": "assets/sfx_hit.mp3",
+			"type": "sound",
+			"name": "sfx_hit_mp3"
+		},
+		{
+			"url": "assets/sfx_point.mp3",
+			"type": "sound",
+			"name": "sfx_point_mp3"
+		},
+		{
+			"url": "assets/sfx_swooshing.mp3",
+			"type": "sound",
+			"name": "sfx_swooshing_mp3"
+		},
+		{
+			"url": "assets/sfx_wing.mp3",
+			"type": "sound",
+			"name": "sfx_wing_mp3"
+		},
+		{
+			"url": "assets/tube1.png",
+			"type": "image",
+			"name": "tube1_png"
+		},
+		{
+			"url": "assets/tube2.png",
+			"type": "image",
+			"name": "tube2_png"
+		}
+	]
+}
