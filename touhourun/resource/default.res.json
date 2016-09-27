@@ -1,0 +1,110 @@
+{
+	"groups": [
+		{
+			"keys": "bg_jpg,egret_icon_png,description_json,marisa_left_png,marisa_left_json,walk_down1_png,circle_png,rect_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/walk_down1.png",
+			"type": "image",
+			"name": "walk_down1_png"
+		},
+		{
+			"url": "assets/walk_down2.png",
+			"type": "image",
+			"name": "walk_down2_png"
+		},
+		{
+			"url": "assets/walk_down3.png",
+			"type": "image",
+			"name": "walk_down3_png"
+		},
+		{
+			"url": "assets/walk_left1.png",
+			"type": "image",
+			"name": "walk_left1_png"
+		},
+		{
+			"url": "assets/walk_left2.png",
+			"type": "image",
+			"name": "walk_left2_png"
+		},
+		{
+			"url": "assets/walk_left3.png",
+			"type": "image",
+			"name": "walk_left3_png"
+		},
+		{
+			"url": "assets/walk_right1.png",
+			"type": "image",
+			"name": "walk_right1_png"
+		},
+		{
+			"url": "assets/walk_right2.png",
+			"type": "image",
+			"name": "walk_right2_png"
+		},
+		{
+			"url": "assets/walk_right3.png",
+			"type": "image",
+			"name": "walk_right3_png"
+		},
+		{
+			"url": "assets/walk_up1.png",
+			"type": "image",
+			"name": "walk_up1_png"
+		},
+		{
+			"url": "assets/walk_up2.png",
+			"type": "image",
+			"name": "walk_up2_png"
+		},
+		{
+			"url": "assets/walk_up3.png",
+			"type": "image",
+			"name": "walk_up3_png"
+		},
+		{
+			"url": "assets/map1.png",
+			"type": "image",
+			"name": "map1_png"
+		},
+		{
+			"url": "assets/marisa_left.json",
+			"type": "json",
+			"name": "marisa_left_json"
+		},
+		{
+			"url": "assets/marisa_left.png",
+			"type": "image",
+			"name": "marisa_left_png"
+		},
+		{
+			"name": "circle_png",
+			"type": "image",
+			"url": "assets/circle.png"
+		},
+		{
+			"name": "rect_png",
+			"type": "image",
+			"url": "assets/rect.png"
+		}
+	]
+}

@@ -1,0 +1,34 @@
+{"mc":{
+	"marisa_left":{
+		"frameRate":12,
+		"labels":[
+			{"name":"marisa_left","frame":1,"end":3}
+			
+			],
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"walk_right1_png",
+			"x":0,
+			"y":0
+			},
+			{
+			"res":"walk_right2_png",
+			"x":0,
+			"y":0
+			},
+			{
+			"res":"walk_right3_png",
+			"x":0,
+			"y":0
+			}
+			]
+}},
+	"res":{
+		"walk_right1_png":{"x":41,"y":1,"w":17,"h":25},
+		"walk_right2_png":{"x":1,"y":1,"w":18,"h":24},
+		"walk_right3_png":{"x":21,"y":1,"w":18,"h":24}
+	}}
