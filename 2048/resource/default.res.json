@@ -1,0 +1,31 @@
+{
+	"groups": [
+		{
+			"keys": "bg_jpg,egret_icon_png,description_json,res_json",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "assets/bg.jpg"
+		},
+		{
+			"name": "egret_icon_png",
+			"type": "image",
+			"url": "assets/egret_icon.png"
+		},
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "res_json",
+			"type": "sheet",
+			"url": "assets/res.json",
+			"subkeys": "background,backtile,continueButton_over,continueButton_up,frontground,menu,number1024,number128,number16,number2,number2048,number256,number32,number4,number4096,number512,number64,number8,number8192,resetButton_over,resetButton_up,result_failed"
+		}
+	]
+}
