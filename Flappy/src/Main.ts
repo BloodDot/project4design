@@ -110,11 +110,26 @@ class Main extends egret.DisplayObjectContainer {
         }
     }
 
-    private startGame():void{
-        var scene:GameScene = new GameScene();
-        this.addChild(scene);
+    private _startScene:StartScene;
+    private _gameScene:GameScene;
 
-        scene.scaleX = scene.scaleY = 2.5;
+    private startGame():void{
+        this._startScene = new StartScene();
+        this.addChild(this._startScene);
+
+        this._startScene.scaleX = this._startScene.scaleY = 2.5;
+        this._startScene.addEventListener(GameEvent.GAME_START, this.__onStartGame, this);
+    }
+
+    private __onStartGame(evt:GameEvent):void{
+        this._startScene.removeEventListener(GameEvent.GAME_START, this.__onStartGame, this);
+
+        this._startScene.dispose();
+        this.removeChild(this._startScene);
+
+        this._gameScene = new GameScene();
+        this.addChild(this._gameScene);
+        this._gameScene.scaleX = this._gameScene.scaleY = 2.5;
     }
 }
 

@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bird1_png,bird2_png,bird3_png,bird_json,bird_png,bg_png,ground_png,sfx_die_mp3,sfx_hit_mp3,sfx_point_mp3,sfx_swooshing_mp3,sfx_wing_mp3,tube1_png,tube2_png",
+			"keys": "bird1_png,bird2_png,bird3_png,bird_json,bird_png,bg_png,ground_png,sfx_die_mp3,sfx_hit_mp3,sfx_point_mp3,sfx_swooshing_mp3,sfx_wing_mp3,tube1_png,tube2_png,button_play_png,button_pause_png,button_resume_png,medals_0_png,medals_1_png,medals_2_png,medals_3_png,score_panel_png,text_game_over_png,text_ready_png,title_png,tutorial_png,white_png,score2_fnt,score2_png,score1_fnt,score1_png",
 			"name": "preload"
 		}
 	],
@@ -75,6 +75,91 @@
 			"url": "assets/tube2.png",
 			"type": "image",
 			"name": "tube2_png"
+		},
+		{
+			"name": "button_play_png",
+			"type": "image",
+			"url": "assets/button_play.png"
+		},
+		{
+			"name": "button_pause_png",
+			"type": "image",
+			"url": "assets/button_pause.png"
+		},
+		{
+			"name": "button_resume_png",
+			"type": "image",
+			"url": "assets/button_resume.png"
+		},
+		{
+			"name": "medals_0_png",
+			"type": "image",
+			"url": "assets/medals_0.png"
+		},
+		{
+			"name": "medals_1_png",
+			"type": "image",
+			"url": "assets/medals_1.png"
+		},
+		{
+			"name": "medals_2_png",
+			"type": "image",
+			"url": "assets/medals_2.png"
+		},
+		{
+			"name": "medals_3_png",
+			"type": "image",
+			"url": "assets/medals_3.png"
+		},
+		{
+			"name": "score_panel_png",
+			"type": "image",
+			"url": "assets/score_panel.png"
+		},
+		{
+			"name": "text_game_over_png",
+			"type": "image",
+			"url": "assets/text_game_over.png"
+		},
+		{
+			"name": "text_ready_png",
+			"type": "image",
+			"url": "assets/text_ready.png"
+		},
+		{
+			"name": "title_png",
+			"type": "image",
+			"url": "assets/title.png"
+		},
+		{
+			"name": "tutorial_png",
+			"type": "image",
+			"url": "assets/tutorial.png"
+		},
+		{
+			"name": "white_png",
+			"type": "image",
+			"url": "assets/white.png"
+		},
+		{
+			"name": "score2_fnt",
+			"type": "font",
+			"url": "assets/score2.fnt"
+		},
+		{
+			"name": "score2_png",
+			"type": "image",
+			"url": "assets/score2.png"
+		},
+		{
+			"name": "score1_fnt",
+			"type": "font",
+			"url": "assets/score1.fnt"
+		},
+		{
+			"name": "score1_png",
+			"type": "image",
+			"url": "assets/score1.png"
 		}
 	]
 }
