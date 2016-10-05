@@ -247,4 +247,3 @@ var GameScene = (function (_super) {
     return GameScene;
 })(egret.Sprite);
 egret.registerClass(GameScene,'GameScene');
-//# sourceMappingURL=GameScene.js.map

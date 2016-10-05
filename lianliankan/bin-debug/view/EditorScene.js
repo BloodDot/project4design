@@ -130,4 +130,3 @@ var EditorScene = (function (_super) {
     return EditorScene;
 })(eui.Component);
 egret.registerClass(EditorScene,'EditorScene');
-//# sourceMappingURL=EditorScene.js.map

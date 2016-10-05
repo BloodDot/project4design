@@ -887,7 +887,7 @@ var egret;
                     WebAudioDecode.isDecoding = false;
                     WebAudioDecode.decodeAudios();
                 }, function () {
-                    console.log("sound decode error: " + decodeInfo["url"] + "！\nsee http://edn.egret.com/cn/docs/page/156");
+                    alert("sound decode error: " + decodeInfo["url"] + "！\nsee http://edn.egret.com/cn/docs/page/156");
                     if (decodeInfo["fail"]) {
                         decodeInfo["fail"]();
                     }
@@ -4029,9 +4029,6 @@ var egret;
 (function (egret) {
     var web;
     (function (web) {
-        /**
-         * @private
-         */
         var WebFps = (function (_super) {
             __extends(WebFps, _super);
             function WebFps(stage, showFPS, showLog, logFilter, styles) {

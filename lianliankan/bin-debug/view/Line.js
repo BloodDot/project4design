@@ -15,4 +15,3 @@ var Line = (function (_super) {
     return Line;
 })(egret.Sprite);
 egret.registerClass(Line,'Line');
-//# sourceMappingURL=Line.js.map

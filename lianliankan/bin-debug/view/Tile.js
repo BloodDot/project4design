@@ -33,4 +33,3 @@ var Tile = (function (_super) {
     return Tile;
 })(egret.Sprite);
 egret.registerClass(Tile,'Tile');
-//# sourceMappingURL=Tile.js.map

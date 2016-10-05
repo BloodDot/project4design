@@ -12,4 +12,3 @@ var ArgsWindow = (function (_super) {
     return ArgsWindow;
 })(eui.Component);
 egret.registerClass(ArgsWindow,'ArgsWindow');
-//# sourceMappingURL=ArgsWindow.js.map

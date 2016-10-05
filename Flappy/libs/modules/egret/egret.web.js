@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -54,7 +54,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -114,7 +114,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -196,7 +196,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -298,7 +298,7 @@ var egret;
                 startTime = +startTime || 0;
                 loops = +loops || 0;
                 if (DEBUG && this.loaded == false) {
-                    egret.$error(1049);
+                    egret.$error(3001);
                 }
                 var audio = HtmlSound.$pop(this.url);
                 if (audio == null) {
@@ -383,7 +383,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -540,7 +540,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -624,7 +624,7 @@ var egret;
                 startTime = +startTime || 0;
                 loops = +loops || 0;
                 if (DEBUG && this.loaded == false) {
-                    egret.$error(1049);
+                    egret.$error(3001);
                 }
                 var channel = new web.QQSoundChannel();
                 channel.$url = this.url;
@@ -674,7 +674,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -829,7 +829,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -981,7 +981,7 @@ var egret;
                 startTime = +startTime || 0;
                 loops = +loops || 0;
                 if (DEBUG && this.loaded == false) {
-                    egret.$error(1049);
+                    egret.$error(3001);
                 }
                 var channel = new web.WebAudioSoundChannel();
                 channel.$url = this.url;
@@ -1031,7 +1031,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -1202,7 +1202,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -1690,7 +1690,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -1929,7 +1929,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -2139,7 +2139,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -2422,15 +2422,10 @@ var egret;
                 var textfield = this.$textfield;
                 if (textfield.multiline) {
                     var textheight = egret.TextFieldUtils.$getTextHeight(textfield);
-                    if (textfield.height <= textfield.size) {
+                    if (textfield.height <= textfield.size || textfield.height < textheight) {
                         this.setElementStyle("height", (textfield.size) * this._gscaleY + "px");
                         this.setElementStyle("padding", "0px");
                         this.setElementStyle("lineHeight", (textfield.size) * this._gscaleY + "px");
-                    }
-                    else if (textfield.height < textheight) {
-                        this.setElementStyle("height", (textfield.height) * this._gscaleY + "px");
-                        this.setElementStyle("padding", "0px");
-                        this.setElementStyle("lineHeight", (textfield.size + textfield.lineSpacing) * this._gscaleY + "px");
                     }
                     else {
                         this.setElementStyle("height", (textheight + textfield.lineSpacing) * this._gscaleY + "px");
@@ -2822,7 +2817,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -2894,7 +2889,13 @@ var egret;
          * @private
          */
         function createContext() {
-            context = egret.sys.hitTestBuffer.context;
+            if (egret.Capabilities.renderMode == "canvas") {
+                context = egret.sys.hitTestBuffer.context;
+            }
+            else {
+                var canvas = document.createElement("canvas");
+                context = canvas.getContext("2d");
+            }
             context.textAlign = "left";
             context.textBaseline = "middle";
         }
@@ -2903,7 +2904,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -3120,7 +3121,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided this the following conditions are met:
@@ -3331,7 +3332,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -3469,7 +3470,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -3730,7 +3731,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -3808,7 +3809,12 @@ var egret;
                 var player = new web.WebPlayer(container, options);
                 container["egret-player"] = player;
             }
-            egret.sys.hitTestBuffer = new web.CanvasRenderBuffer(3, 3);
+            // TODO hitTestBuffer创建目前必须在主buffer创建之后
+            if (egret.Capabilities.renderMode == "webgl") {
+                egret.sys.hitTestBuffer = new web.WebGLRenderBuffer(3, 3);
+            }
+            else {
+            }
         }
         /**
          * 设置渲染模式。"auto","webgl","canvas"
@@ -3818,13 +3824,14 @@ var egret;
             if (renderMode == "webgl" && egret.WebGLUtils.checkCanUseWebGL()) {
                 egret.sys.RenderBuffer = web.WebGLRenderBuffer;
                 egret.sys.systemRenderer = new web.WebGLRenderer();
-                egret.sys.canvasRenderer = new egret.CanvasRenderer();
+                //屏蔽掉cacheAsBitmap,webgl模式不能有太多的RenderContext
+                //DisplayObject.prototype.$setHasDisplayList = function(){};
                 egret.Capabilities.$renderMode = "webgl";
             }
             else {
+                egret.sys.hitTestBuffer = new web.CanvasRenderBuffer(3, 3);
                 egret.sys.RenderBuffer = web.CanvasRenderBuffer;
                 egret.sys.systemRenderer = new egret.CanvasRenderer();
-                egret.sys.canvasRenderer = egret.sys.systemRenderer;
                 egret.Capabilities.$renderMode = "canvas";
             }
         }
@@ -3876,7 +3883,7 @@ if (DEBUG) {
 }
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -3992,7 +3999,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -4022,9 +4029,6 @@ var egret;
 (function (egret) {
     var web;
     (function (web) {
-        /**
-         * @private
-         */
         var WebFps = (function (_super) {
             __extends(WebFps, _super);
             function WebFps(stage, showFPS, showLog, logFilter, styles) {
@@ -4237,7 +4241,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -4295,7 +4299,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -4506,7 +4510,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -4605,11 +4609,17 @@ var egret;
             var buffer = egret.sys.hitTestBuffer;
             buffer.resize(3, 3);
             var context = buffer.context;
+            if (!context.translate) {
+                context = buffer;
+            }
             context.translate(1 - x, 1 - y);
             var width = this._bitmapWidth;
             var height = this._bitmapHeight;
             var scale = egret.$TextureScaleFactor;
             context.drawImage(this._bitmapData, this._bitmapX, this._bitmapY, width, this._bitmapHeight, this._offsetX, this._offsetY, width * scale, height * scale);
+            if (context.$drawWebGL) {
+                context.$drawWebGL();
+            }
             try {
                 var data = buffer.getPixel(1, 1);
             }
@@ -4632,7 +4642,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -4974,7 +4984,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -5059,7 +5069,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -5233,7 +5243,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -5287,7 +5297,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -5340,7 +5350,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -5381,19 +5391,20 @@ var egret;
                     "uniform vec2 blur;" +
                     "uniform sampler2D uSampler;" +
                     "varying vec2 vTextureCoord;" +
+                    "uniform vec4 uBounds;" +
                     "uniform vec2 uTextureSize;" +
                     "void main()" +
                     "{" +
                     "const int sampleRadius = 5;" +
                     "const int samples = sampleRadius * 2 + 1;" +
-                    "vec2 blurUv = blur / uTextureSize;" +
                     "vec4 color = vec4(0, 0, 0, 0);" +
                     "vec2 uv = vec2(0.0, 0.0);" +
-                    "blurUv /= float(sampleRadius);" +
                     "for (int i = -sampleRadius; i <= sampleRadius; i++) {" +
-                    "uv.x = vTextureCoord.x + float(i) * blurUv.x;" +
-                    "uv.y = vTextureCoord.y + float(i) * blurUv.y;" +
+                    "uv.x = vTextureCoord.x + float(i) * blur.x / float(sampleRadius) / uTextureSize.x;" +
+                    "uv.y = vTextureCoord.y + float(i) * blur.y / float(sampleRadius) / uTextureSize.y;" +
+                    "if(uv.x >= uBounds[0] && uv.x <= uBounds[2] && uv.y >= uBounds[1] && uv.y <= uBounds[3]) {" +
                     "color += texture2D(uSampler, uv);" +
+                    "}" +
                     '}' +
                     "color /= float(samples);" +
                     "gl_FragColor = color;" +
@@ -5401,6 +5412,7 @@ var egret;
                 this.uniforms = {
                     projectionVector: { type: '2f', value: { x: 0, y: 0 }, dirty: true },
                     blur: { type: '2f', value: { x: 2, y: 2 }, dirty: true },
+                    uBounds: { type: '4f', value: { x: 0, y: 0, z: 1, w: 1 }, dirty: true },
                     uTextureSize: { type: '2f', value: { x: 100, y: 100 }, dirty: true }
                 };
             }
@@ -5411,6 +5423,30 @@ var egret;
                     uniform.value.x = blurX;
                     uniform.value.y = blurY;
                     uniform.dirty = true;
+                }
+            };
+            /**
+             * 设置模糊滤镜需要传入的uv坐标
+             */
+            p.setUv = function (uv) {
+                var uniform = this.uniforms.uBounds;
+                if (uv) {
+                    if (uniform.value.x != uv[0] || uniform.value.y != uv[1] || uniform.value.z != uv[2] || uniform.value.w != uv[3]) {
+                        uniform.value.x = uv[0];
+                        uniform.value.y = uv[1];
+                        uniform.value.z = uv[2];
+                        uniform.value.w = uv[3];
+                        uniform.dirty = true;
+                    }
+                }
+                else {
+                    if (uniform.value.x != 0 || uniform.value.y != 0 || uniform.value.z != 1 || uniform.value.w != 1) {
+                        uniform.value.x = 0;
+                        uniform.value.y = 0;
+                        uniform.value.z = 1;
+                        uniform.value.w = 1;
+                        uniform.dirty = true;
+                    }
                 }
             };
             /**
@@ -5432,7 +5468,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -5472,17 +5508,23 @@ var egret;
                 this.fragmentSrc = "precision mediump float;\n" +
                     "varying vec2 vTextureCoord;\n" +
                     "varying vec4 vColor;\n" +
+                    "uniform float invert;\n" +
                     "uniform mat4 matrix;\n" +
                     "uniform vec4 colorAdd;\n" +
                     "uniform sampler2D uSampler;\n" +
                     "void main(void) {\n" +
                     "vec4 texColor = texture2D(uSampler, vTextureCoord);\n" +
-                    "if(texColor.a > 0.) {" +
-                    // 抵消预乘的alpha通道
-                    "texColor = vec4(texColor.rgb / texColor.a, texColor.a);\n" +
-                    "}" +
-                    "vec4 locColor = clamp(texColor * matrix + colorAdd, 0., 1.);\n" +
-                    "gl_FragColor = vColor * vec4(locColor.rgb * locColor.a, locColor.a);\n" +
+                    "vec4 locColor = texColor * matrix;\n" +
+                    "vec4 transformColor = vec4(1.0, 1.0, 1.0, 1.0) * matrix;\n" +
+                    "locColor += colorAdd;\n" +
+                    "transformColor += colorAdd;\n" +
+                    "if(locColor.a <= 0.0){\n" +
+                    "discard;\n" +
+                    "}\n" +
+                    "if(transformColor.a > 1.0){\n" +
+                    "transformColor.a = 1.0;\n" +
+                    "}\n" +
+                    "gl_FragColor = vColor*vec4(locColor.rgb*transformColor.a,locColor.a);\n" +
                     "}";
                 this.uniforms = {
                     projectionVector: { type: '2f', value: { x: 0, y: 0 }, dirty: true },
@@ -5551,7 +5593,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -5588,9 +5630,44 @@ var egret;
             __extends(GlowShader, _super);
             function GlowShader() {
                 _super.apply(this, arguments);
+                // public fragmentSrc =
+                //     "precision mediump float;"+
+                //     "uniform sampler2D uSampler;"+
+                //     "varying vec2 vTextureCoord;"+
+                //     "uniform vec2 uTextureSize;"+
+                //     "uniform vec4 u_color;"+
+                //     "uniform float u_strength;"+
+                //     "uniform float blur;"+
+                //     "uniform float offset;"+
+                //     "void main()"+
+                //     "{"+
+                //         "float u_textW = uTextureSize.x;"+
+                //         "float u_textH = uTextureSize.y;"+
+                //         "float u_blurX = blur.x;"+
+                //         "float u_blurY = blur.y;"+
+                //         "float u_offsetX = offset.x;"+
+                //         "float u_offsetY = offset.y;"+
+                //         "const float c_IterationTime = 10.0;"+
+                //         "float floatIterationTotalTime = c_IterationTime * c_IterationTime;"+
+                //         "vec4 vec4Color = vec4(0.0,0.0,0.0,0.0);"+
+                //         "vec2 vec2FilterDir = vec2(-(u_offsetX)/u_textW,-(u_offsetY)/u_textH);"+
+                //         "vec2 vec2FilterOff = vec2(u_blurX/u_textW/c_IterationTime * 2.0,u_blurY/u_textH/c_IterationTime * 2.0);"+
+                //         "float maxNum = u_blurX * u_blurY;"+
+                //         "vec2 vec2Off = vec2(0.0,0.0);"+
+                //         "float floatOff = c_IterationTime/2.0;"+
+                //         "for(float i = 0.0;i<=c_IterationTime; ++i){"+
+                //             "for(float j = 0.0;j<=c_IterationTime; ++j){"+
+                //                 "vec2Off = vec2(vec2FilterOff.x * (i - floatOff),vec2FilterOff.y * (j - floatOff));"+
+                //                 "vec4Color += texture2D(uSampler, vTextureCoord + vec2FilterDir + vec2Off)/floatIterationTotalTime;"+
+                //             "}"+
+                //         "}"+
+                //         "gl_FragColor = vec4(u_color.rgb,vec4Color.a * u_strength);"+
+                //     "}";
                 this.fragmentSrc = [
                     'precision mediump float;',
+                    // 'varying vec2 vTextureCoord;',
                     'varying vec2 vTextureCoord;',
+                    // 'varying vec4 vColor;',
                     'uniform sampler2D uSampler;',
                     'uniform float distance;',
                     'uniform float angle;',
@@ -5602,17 +5679,12 @@ var egret;
                     'uniform float strength;',
                     'uniform float inner;',
                     'uniform float knockout;',
-                    'uniform float hideObject;',
                     "uniform vec2 uTextureSize;" +
                         'vec2 px = vec2(1.0 / uTextureSize.x, 1.0 / uTextureSize.y);',
-                    'float random(vec3 scale, float seed)',
-                    '{',
-                    'return fract(sin(dot(gl_FragCoord.xyz + seed, scale)) * 43758.5453 + seed);',
-                    '}',
                     'void main(void) {',
                     // TODO 自动调节采样次数？
-                    'const float linearSamplingTimes = 7.0;',
-                    'const float circleSamplingTimes = 12.0;',
+                    'const float linearSamplingTimes = 8.0;',
+                    'const float circleSamplingTimes = 8.0;',
                     'vec4 ownColor = texture2D(uSampler, vTextureCoord);',
                     'vec4 curColor;',
                     'float totalAlpha = 0.0;',
@@ -5624,25 +5696,22 @@ var egret;
                     'const float PI = 3.14159265358979323846264;',
                     'float cosAngle;',
                     'float sinAngle;',
-                    'float offset = PI * 2.0 / circleSamplingTimes * random(vec3(12.9898, 78.233, 151.7182), 0.0);',
-                    'float stepX = blurX * px.x / linearSamplingTimes;',
-                    'float stepY = blurY * px.y / linearSamplingTimes;',
-                    'for (float a = 0.0; a <= PI * 2.0; a += PI * 2.0 / circleSamplingTimes) {',
-                    'cosAngle = cos(a + offset);',
-                    'sinAngle = sin(a + offset);',
+                    'for (float a = 1.0; a <= PI * 2.0; a += PI * 2.0 / circleSamplingTimes) {',
+                    'cosAngle = cos(a);',
+                    'sinAngle = sin(a);',
                     'for (float i = 1.0; i <= linearSamplingTimes; i++) {',
-                    'curDistanceX = i * stepX * cosAngle;',
-                    'curDistanceY = i * stepY * sinAngle;',
+                    'curDistanceX = i * blurX * cosAngle * px.x / linearSamplingTimes;',
+                    'curDistanceY = i * blurY * sinAngle * px.y / linearSamplingTimes;',
                     'curColor = texture2D(uSampler, vec2(vTextureCoord.x + curDistanceX - offsetX, vTextureCoord.y + curDistanceY + offsetY));',
-                    'totalAlpha += (linearSamplingTimes - i) * curColor.a;',
-                    'maxTotalAlpha += (linearSamplingTimes - i);',
+                    'totalAlpha += (1. - i / linearSamplingTimes) * curColor.a;',
+                    'maxTotalAlpha += (1. - i / linearSamplingTimes);',
                     '}',
                     '}',
                     'ownColor.a = max(ownColor.a, 0.0001);',
                     'ownColor.rgb = ownColor.rgb / ownColor.a;',
-                    'float outerGlowAlpha = (totalAlpha / maxTotalAlpha) * strength * alpha * (1. - inner) * max(min(hideObject, knockout), 1. - ownColor.a);',
+                    'float outerGlowAlpha = (totalAlpha / maxTotalAlpha)  * strength * alpha * (1. - inner) * (1. - ownColor.a);',
                     'float innerGlowAlpha = ((maxTotalAlpha - totalAlpha) / maxTotalAlpha) * strength * alpha * inner * ownColor.a;',
-                    'ownColor.a = max(ownColor.a * knockout * (1. - hideObject), 0.0001);',
+                    'ownColor.a = max(ownColor.a * knockout, 0.0001);',
                     'vec3 mix1 = mix(ownColor.rgb, color.rgb, innerGlowAlpha / (innerGlowAlpha + ownColor.a));',
                     'vec3 mix2 = mix(mix1, color.rgb, outerGlowAlpha / (innerGlowAlpha + ownColor.a + outerGlowAlpha));',
                     'float resultAlpha = min(ownColor.a + outerGlowAlpha + innerGlowAlpha, 1.);',
@@ -5660,7 +5729,6 @@ var egret;
                     strength: { type: '1f', value: 1, dirty: true },
                     inner: { type: '1f', value: 1, dirty: true },
                     knockout: { type: '1f', value: 1, dirty: true },
-                    hideObject: { type: '1f', value: 0, dirty: true },
                     uTextureSize: { type: '2f', value: { x: 100, y: 100 }, dirty: true }
                 };
             }
@@ -5730,13 +5798,6 @@ var egret;
                     uniform.dirty = true;
                 }
             };
-            p.setHideObject = function (hideObject) {
-                var uniform = this.uniforms.hideObject;
-                if (uniform.value != hideObject) {
-                    uniform.value = hideObject;
-                    uniform.dirty = true;
-                }
-            };
             /**
              * 设置采样材质的尺寸
              */
@@ -5756,7 +5817,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -5863,7 +5924,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -5923,7 +5984,7 @@ var egret;
             /**
              * 压入绘制texture指令
              */
-            p.pushDrawTexture = function (texture, count, filter, textureWidth, textureHeight) {
+            p.pushDrawTexture = function (texture, count, filter, uv) {
                 if (count === void 0) { count = 2; }
                 if (filter) {
                     // 目前有滤镜的情况下不会合并绘制
@@ -5932,8 +5993,7 @@ var egret;
                     data.texture = texture;
                     data.filter = filter;
                     data.count = count;
-                    data.textureWidth = textureWidth;
-                    data.textureHeight = textureHeight;
+                    data.uv = uv;
                     this.drawData[this.drawDataLen] = data;
                     this.drawDataLen++;
                 }
@@ -6083,7 +6143,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -6329,7 +6389,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -6457,7 +6517,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -6512,6 +6572,7 @@ var egret;
                 this.shaderManager = null;
                 this.contextLost = false;
                 this.vertSize = 5;
+                this.colorMatrixFilter = null;
                 this.blurFilter = null;
                 this.surface = createCanvas(width, height);
                 this.initWebGL();
@@ -6827,8 +6888,7 @@ var egret;
                 var transform = buffer.globalMatrix;
                 var alpha = buffer.globalAlpha;
                 var count = meshIndices ? meshIndices.length / 3 : 2;
-                // 应用$filter，因为只可能是colorMatrixFilter，最后两个参数可不传
-                this.drawCmdManager.pushDrawTexture(texture, count, this.$filter);
+                this.drawCmdManager.pushDrawTexture(texture, count);
                 this.vao.cacheArrays(transform, alpha, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight, textureWidth, textureHeight, meshUVs, meshVertices, meshIndices);
             };
             /**
@@ -6944,30 +7004,28 @@ var egret;
                     case 0 /* TEXTURE */:
                         var filter = data.filter;
                         var shader;
-                        if (filter) {
-                            if (filter.type == "colorTransform") {
-                                shader = this.shaderManager.colorTransformShader;
-                                shader.setMatrix(filter.$matrix);
-                            }
-                            else if (filter.type == "blur") {
-                                shader = this.shaderManager.blurShader;
-                                shader.setBlur(filter.$blurX, filter.$blurY);
-                                shader.setTextureSize(data.textureWidth, data.textureHeight);
-                            }
-                            else if (filter.type == "glow") {
-                                shader = this.shaderManager.glowShader;
-                                shader.setDistance(filter.$distance || 0);
-                                shader.setAngle(filter.$angle ? filter.$angle / 180 * Math.PI : 0);
-                                shader.setColor(filter.$red / 255, filter.$green / 255, filter.$blue / 255);
-                                shader.setAlpha(filter.$alpha);
-                                shader.setBlurX(filter.$blurX);
-                                shader.setBlurY(filter.$blurY);
-                                shader.setStrength(filter.$strength);
-                                shader.setInner(filter.$inner ? 1 : 0);
-                                shader.setKnockout(filter.$knockout ? 0 : 1);
-                                shader.setHideObject(filter.$hideObject ? 1 : 0);
-                                shader.setTextureSize(data.textureWidth, data.textureHeight);
-                            }
+                        if (filter && filter.type == "colorTransform") {
+                            shader = this.shaderManager.colorTransformShader;
+                            shader.setMatrix(filter.matrix);
+                        }
+                        else if (filter && filter.type == "blur") {
+                            shader = this.shaderManager.blurShader;
+                            shader.setBlur(filter.blurX, filter.blurY);
+                            shader.setUv(data.uv);
+                            shader.setTextureSize(filter.textureWidth, filter.textureHeight);
+                        }
+                        else if (filter && filter.type == "glow") {
+                            shader = this.shaderManager.glowShader;
+                            shader.setDistance(filter.distance);
+                            shader.setAngle(filter.angle);
+                            shader.setColor(filter.$red, filter.$green, filter.$blue);
+                            shader.setAlpha(filter.alpha);
+                            shader.setBlurX(filter.blurX);
+                            shader.setBlurY(filter.blurY);
+                            shader.setStrength(filter.strength);
+                            shader.setInner(filter.inner);
+                            shader.setKnockout(filter.knockout);
+                            shader.setTextureSize(filter.textureWidth, filter.textureHeight);
                         }
                         else {
                             shader = this.shaderManager.defaultShader;
@@ -6978,21 +7036,21 @@ var egret;
                         offset += this.drawTextureElements(data, offset);
                         break;
                     case 1 /* RECT */:
-                        var shader = this.shaderManager.primitiveShader;
+                        shader = this.shaderManager.primitiveShader;
                         shader.setProjection(this.projectionX, this.projectionY);
                         this.shaderManager.activateShader(shader, this.vertSize * 4);
                         shader.syncUniforms();
                         offset += this.drawRectElements(data, offset);
                         break;
                     case 2 /* PUSH_MASK */:
-                        var shader = this.shaderManager.primitiveShader;
+                        shader = this.shaderManager.primitiveShader;
                         shader.setProjection(this.projectionX, this.projectionY);
                         this.shaderManager.activateShader(shader, this.vertSize * 4);
                         shader.syncUniforms();
                         offset += this.drawPushMaskElements(data, offset);
                         break;
                     case 3 /* POP_MASK */:
-                        var shader = this.shaderManager.primitiveShader;
+                        shader = this.shaderManager.primitiveShader;
                         shader.setProjection(this.projectionX, this.projectionY);
                         this.shaderManager.activateShader(shader, this.vertSize * 4);
                         shader.syncUniforms();
@@ -7133,6 +7191,20 @@ var egret;
                     web.WebGLRenderBuffer.release(input);
                 }
             };
+            p.getUv = function (sourceX, sourceY, sourceWidth, sourceHeight, textureSourceWidth, textureSourceHeight) {
+                var uv = [
+                    0, 0,
+                    1, 1
+                ];
+                for (var i = 0, l = uv.length; i < l; i += 2) {
+                    var u = uv[i];
+                    var v = uv[i + 1];
+                    // uv
+                    uv[i] = (sourceX + u * sourceWidth) / textureSourceWidth;
+                    uv[i + 1] = (sourceY + v * sourceHeight) / textureSourceHeight;
+                }
+                return uv;
+            };
             /**
              * 向一个renderTarget中绘制
              * */
@@ -7144,15 +7216,17 @@ var egret;
                     this.$drawWebGL();
                 }
                 this.pushBuffer(output);
-                var originInput = input, temp, width = input.rootRenderTarget.width, height = input.rootRenderTarget.height;
+                var originInput = input, temp;
                 // 模糊滤镜实现为blurX与blurY的叠加
                 if (filter.type == "blur") {
-                    if (!this.blurFilter) {
-                        this.blurFilter = new egret.BlurFilter(2, 2);
-                    }
                     if (filter.blurX != 0 && filter.blurY != 0) {
+                        if (!this.blurFilter) {
+                            this.blurFilter = new egret.BlurFilter(2, 2);
+                        }
                         this.blurFilter.blurX = filter.blurX;
                         this.blurFilter.blurY = 0;
+                        var width = input.rootRenderTarget.width;
+                        var height = input.rootRenderTarget.height;
                         temp = web.WebGLRenderBuffer.create(width, height);
                         temp.setTransform(1, 0, 0, 1, 0, 0);
                         temp.globalAlpha = 1;
@@ -7161,30 +7235,58 @@ var egret;
                             web.WebGLRenderBuffer.release(input);
                         }
                         input = temp;
-                        this.blurFilter.blurX = 0;
+                    }
+                }
+                // 绘制input结果到舞台
+                var width = input.rootRenderTarget.width;
+                var height = input.rootRenderTarget.height;
+                if (filter.type == "blur") {
+                    if (!this.blurFilter) {
+                        this.blurFilter = new egret.BlurFilter(2, 2);
+                    }
+                    if (filter.blurX == 0 || filter.blurY == 0) {
+                        this.blurFilter.blurX = filter.blurX;
                         this.blurFilter.blurY = filter.blurY;
                     }
                     else {
-                        this.blurFilter.blurX = filter.blurX;
+                        this.blurFilter.blurX = 0;
                         this.blurFilter.blurY = filter.blurY;
                     }
                     filter = this.blurFilter;
                 }
-                // 绘制input结果到舞台
                 output.saveTransform();
                 output.transform(1, 0, 0, -1, 0, height);
                 this.vao.cacheArrays(output.globalMatrix, output.globalAlpha, 0, 0, width, height, 0, 0, width, height, width, height);
                 output.restoreTransform();
-                var filterData;
-                if (filter.type == "blur") {
-                    // 实现blurx与blurY分开处理，会借用公用filter
-                    // 为了允许公用filter的存在，这里拷贝filter到对象中
-                    filterData = { type: "blur", $blurX: filter.$blurX, $blurY: filter.$blurY };
+                var filterData = { type: "", distance: 0, angle: 0, alpha: 0, strength: 0, $red: 0, $green: 0, $blue: 0, matrix: null, blurX: 0, blurY: 0, inner: 0, knockout: 0, textureWidth: 0, textureHeight: 0 };
+                if (filter.type == "colorTransform") {
+                    filterData.type = "colorTransform";
+                    filterData.matrix = filter.matrix;
                 }
-                else {
-                    filterData = filter;
+                else if (filter.type == "blur") {
+                    filterData.type = "blur";
+                    filterData.blurX = filter.blurX;
+                    filterData.blurY = filter.blurY;
+                    filterData.textureWidth = width;
+                    filterData.textureHeight = height;
                 }
-                this.drawCmdManager.pushDrawTexture(input["rootRenderTarget"].texture, 2, filterData, width, height);
+                else if (filter.type == "glow") {
+                    filterData.type = "glow";
+                    filterData.distance = filter.distance || 0;
+                    filterData.angle = filter.angle ? filter.angle / 180 * Math.PI : 0;
+                    filterData.$red = filter.$red / 255;
+                    filterData.$green = filter.$green / 255;
+                    filterData.$blue = filter.$blue / 255;
+                    filterData.alpha = filter.alpha;
+                    filterData.blurX = filter.blurX;
+                    filterData.blurY = filter.blurY;
+                    filterData.strength = filter.strength;
+                    filterData.inner = filter.inner ? 1 : 0;
+                    filterData.knockout = filter.knockout ? 0 : 1;
+                    filterData.textureWidth = width;
+                    filterData.textureHeight = height;
+                }
+                this.drawCmdManager.pushDrawTexture(input["rootRenderTarget"].texture, 2, filterData);
                 // 释放掉input
                 if (input != originInput) {
                     web.WebGLRenderBuffer.release(input);
@@ -7221,7 +7323,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -7257,6 +7359,28 @@ var egret;
          */
         var WebGLRenderBuffer = (function () {
             function WebGLRenderBuffer(width, height) {
+                // private filters = [];
+                // public pushFilters(filters) {
+                //     this.filters.push(filters);
+                // }
+                // public popFilters() {
+                //     this.filters.pop();
+                // }
+                // public getFilters() {
+                //     var filters = [];
+                //     for(var i = 0; i < this.filters.length; i++) {
+                //         var _filters = this.filters[i];
+                //         if(_filters) {
+                //             for(var j = 0; j < _filters.length; j++) {
+                //                 var filter = _filters[j];
+                //                 if(filter && filter.type != "glow") {// 暂时屏蔽掉发光滤镜
+                //                     filters.push(filter);
+                //                 }
+                //             }
+                //         }
+                //     }
+                //     return filters;
+                // }
                 this.globalAlpha = 1;
                 /**
                  * stencil state
@@ -7614,7 +7738,7 @@ var egret;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
-//  Copyright (c) 2014-present, Egret Technology.
+//  Copyright (c) 2014-2015, Egret Technology Inc.
 //  All rights reserved.
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -7786,6 +7910,9 @@ var egret;
                         }
                     }
                 }
+                // if(filterPushed) {
+                //     buffer.popFilters();
+                // }
                 return drawCalls;
             };
             /**
@@ -7793,26 +7920,6 @@ var egret;
              */
             p.drawWithFilter = function (displayObject, buffer, dirtyList, matrix, clipRegion, root) {
                 var drawCalls = 0;
-                var filters = displayObject.$getFilters();
-                var hasBlendMode = (displayObject.$blendMode !== 0);
-                if (hasBlendMode) {
-                    var compositeOp = blendModes[displayObject.$blendMode];
-                    if (!compositeOp) {
-                        compositeOp = defaultCompositeOp;
-                    }
-                }
-                if (filters.length == 1 && filters[0].type == "colorTransform" && !displayObject.$children) {
-                    if (hasBlendMode) {
-                        buffer.context.setGlobalCompositeOperation(compositeOp);
-                    }
-                    buffer.context.$filter = filters[0];
-                    drawCalls += this.drawDisplayObject(displayObject, buffer, dirtyList, matrix, displayObject.$displayList, clipRegion, root);
-                    buffer.context.$filter = null;
-                    if (hasBlendMode) {
-                        buffer.context.setGlobalCompositeOperation(defaultCompositeOp);
-                    }
-                    return drawCalls;
-                }
                 // 获取显示对象的链接矩阵
                 var displayMatrix = egret.Matrix.create();
                 displayMatrix.copyFrom(displayObject.$getConcatenatedMatrix());
@@ -7832,17 +7939,12 @@ var egret;
                 displayBuffer.context.popBuffer();
                 //绘制结果到屏幕
                 if (drawCalls > 0) {
-                    if (hasBlendMode) {
-                        buffer.context.setGlobalCompositeOperation(compositeOp);
-                    }
                     drawCalls++;
                     buffer.globalAlpha = 1;
                     buffer.setTransform(1, 0, 0, 1, region.minX + matrix.tx, region.minY + matrix.ty);
                     // 绘制结果的时候，应用滤镜
+                    var filters = displayObject.$getFilters();
                     buffer.context.drawTargetWidthFilters(filters, displayBuffer);
-                    if (hasBlendMode) {
-                        buffer.context.setGlobalCompositeOperation(defaultCompositeOp);
-                    }
                 }
                 renderBufferPool.push(displayBuffer);
                 egret.sys.Region.release(region);
@@ -8133,6 +8235,9 @@ var egret;
                         break;
                     case 4 /* GroupNode */:
                         this.renderGroup(node, buffer);
+                        break;
+                    case 5 /* SetTransformNode */:
+                        buffer.setTransform(node.drawData[0], node.drawData[1], node.drawData[2], node.drawData[3], node.drawData[4], node.drawData[5]);
                         break;
                     case 6 /* SetAlphaNode */:
                         buffer.globalAlpha = node.drawData[0];
