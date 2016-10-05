@@ -9,11 +9,11 @@
 		<title>
 			幻想边境:专注Html5游戏
 		</title>
-		
+
 		<!-- 新 Bootstrap 核心 CSS 文件 -->
 		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 		
-		 <!--可选的Bootstrap主题文件（一般不用引入）--> 
+		<!-- 可选的Bootstrap主题文件（一般不用引入） -->
 		<!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">-->
 		
 		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -21,11 +21,10 @@
 		
 		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 		<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	    
-	    <script type="text/javascript" src="fborder/js/analytics.js" ></script>
-	    <link rel="stylesheet" href="fborder/css/application.css" />
-	    <link rel="stylesheet" href="fborder/css/fborder.css" />
-	    <meta content='#ffffff' name='theme-color'>
+
+		
+		<link rel="stylesheet" href="fborder/css/fborder.css" />
+		<meta content='#ffffff' name='theme-color'>
 	</head>
 
 	<body>
@@ -46,10 +45,7 @@
 							<a href="">主页</a>
 						</li>
 						<li class="btn-default">
-							<a href="">成员</a>
-						</li>
-						<li class="btn-default">
-							<a href="">关于</a>
+							<a href="#about">关于</a>
 						</li>
 					</ul>
 				</div>
@@ -57,55 +53,148 @@
 		</nav>
 
 		<div class='main-wrapper'>
-			<div class='row bg-dark-blue'>
-				<div class='container'>
-					<div class='col-md-12'>
-						<img src="fborder/img/team_header_transparent_bg.png" class="img-responsive" alt="Header transparent bg" />
-					</div>
-				</div>
+			<div class='container' id="bg-logo">
+				<img src="fborder/img/logo.png" class="img-responsive center-block"/>
 			</div>
 
 			<div class='container content-padding'>
-				<div class='row'>
-					<span class="glyphicon glyphicon-th">
-						游戏作品
-					</span>
-				</div>
-				
+				<span class="glyphicon glyphicon-th foot-title1">
+					游戏作品
+				</span>
+
 				<hr class="mt-10">
-				<div class='row team'>
-					<div class='col-xs-6 col-sm-4 col-md-3'>
-						<div class='polygon-each-img-wrap'>
-							<img src="fborder/img/icon.png" class="polygon-each-img-wrap" alt="Indirect" />
-						</div>
-						<div class='caption text-center'>
-							<h4><b>全名抓金手</b></h4>
-							<a href="" class="btn btn-default">点击试玩</a>
-						</div>
-					</div>
-				</div>
+				<div class='row team' id="releaselist"></div>
 			</div>
-			
-			<div class='container content-padding'>
-				<div class='row'>
-					<span class="glyphicon glyphicon-th-list">
-						游戏研究
-					</span>
-				</div>
-				
+
+			<div class='container content-padding'">
+				<span class="glyphicon glyphicon-th-list foot-title2">
+					游戏研究
+				</span>
+
 				<hr class="mt-10">
-				<div class='row team'>
-					<div class='col-xs-6 col-sm-4 col-md-3'>
-						<div class='polygon-each-img-wrap'>
-							<img src="fborder/img/icon.png" class="polygon-each-img-wrap" alt="Indirect" />
-						</div>
-						<div class='caption text-center'>
-							<h4><b>全名抓金手</b></h4>
-							<a href="" class="btn btn-default">点击试玩</a>
-						</div>
-					</div>
-				</div>
+				<div class='row team' id="demolist"></div>
 			</div>
 		</div>
+		
+		<div class="container content-padding" id="about">
+			<span class="glyphicon glyphicon-user">
+				关于
+			</span>
+			<hr class="mt-10">
+			<p class="foot-p">
+				<h5>幻想边境是2016年创建的个人Html5游戏外包工作室</h5>
+				<h5>在经过几年的打磨后Html5日渐成熟，造就了当下的火热</h5>
+				<h5>现诚接各种Html5游戏外包，保证进度和完成度</h5>	
+			</p>
+			<p class="foot-p">
+				<h5 class="foot-title1">接包原则：</h5>
+				<h5 class="foot-text">1.需求明确</h5>
+				<h5 class="foot-text">2.只做前端，不开发服务器端的内容</h5>
+				<h5 class="foot-text">3.不接受后期产品的维护</h5>	
+			</p>
+			<p class="foot-p">
+				<h5 class="foot-title2">联系方式:</h5>
+				<h5 class="foot-text">qq:1651559980</h5>	
+			</p>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.ajax({
+					url: "fborder/php/releaselist.php",
+					type: "POST",
+					dataType: "text",
+					success: showReleaseList
+				});
+
+				$.ajax({
+					url: "fborder/php/demolist.php",
+					type: "POST",
+					dataType: "text",
+					success: showDemoList
+				});
+			});
+
+			function showReleaseList(data) {				
+				var gldiv = document.getElementById("releaselist");
+				var releaselist = JSON.parse(data);
+				
+				for(var i = 0; i < releaselist.length; i++) {
+					createGameTile(gldiv, releaselist[i]);
+				}
+			}
+
+			function showDemoList(data) {
+				var gldiv = document.getElementById("demolist");
+				var demolist = JSON.parse(data);
+				for(var i = 0; i < demolist.length; i++) {
+					createGameTile(gldiv, demolist[i]);
+				}
+			}
+
+			function createGameTile(gldiv, gameInfo) {
+				var col = document.createElement("div");
+				gldiv.appendChild(col);
+				col.className = "col-xs-4 col-sm-4 col-md-3";
+
+				var polygon = document.createElement("div");
+				col.appendChild(polygon);
+				polygon.className = "polygon-each-img-wrap";
+
+				var icon = document.createElement("img");
+				polygon.appendChild(icon);
+				icon.src = gameInfo[3] + "/icon.png";
+				icon.className = "img-rounded center-block";
+				icon.alt = "Indirect";
+				icon.width = icon.height = 60;
+
+				var caption = document.createElement("div");
+				col.appendChild(caption);
+				caption.className = "caption text-center";
+
+				var gname = document.createElement("h6");
+				caption.appendChild(gname);
+
+				var black = document.createElement("b");
+				gname.appendChild(black);
+				black.textContent = gameInfo[2];
+
+				var link = document.createElement("a");
+				caption.appendChild(link);
+				link.href = gameInfo[3];
+				link.className = "btn btn-default btn-xs";
+				link.text = "点击试玩";
+				if(!ismobile()) {
+					link.target = "view_window";
+				}
+				
+			}
+
+			function ismobile() {
+				var sUserAgent = navigator.userAgent.toLowerCase();
+				var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+				var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+				var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+				var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+				var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+				var bIsAndroid = sUserAgent.match(/android/i) == "android";
+				var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+				var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+
+				if(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		</script>
 	</body>
+	<footer>
+		<hr class="mt-10">
+		<div class="footer text-center">
+			<p>
+				<span class="foot-title1">幻</span>想边<span class="foot-title2">境</span> 2016	
+			</p>
+		</div>
+	</footer>
 </html>
